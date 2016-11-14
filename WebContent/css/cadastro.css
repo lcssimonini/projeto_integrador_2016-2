@@ -1,0 +1,79 @@
+.form-group{
+    color: black;
+    padding: 20px;
+}
+.form-geral{
+    padding: 10px;
+    color: black;
+    margin-top: -7px;
+    width: 100%;  
+}
+.form-total{
+    margin: auto;
+}
+.titulodocadastro{
+    text-align: center;
+    font-size: 25px;
+    color: black;
+}
+.inputp{
+    color: black;
+    width: 50px;
+    height: 25px
+
+}
+.inputm{
+    color: black;
+    width: 100px;
+    height: 25px
+}
+.inputg{
+    color: black;
+    width: 450px;
+    height: 25px
+}
+.btn{
+    background-color: black;
+    color: white;
+    height: 35px;
+    font-size: 15px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+body{
+    background: black;
+    font-family: Helvetica,Arial, sans-serif
+}
+
+.btn:hover {
+    color: lightgrey;
+	background-color:grey;
+	border: 2px lightgray solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.dadosresultados{
+	margin-top: -225px;
+	position: relative;
+	top:50%;
+	margin-left: 80px;
+	padding: 20px;
+	height: 450px;
+	width:300px;
+	color: black;
+	background-color: white;
+	opacity: 0.5;
+	border-radius: 5px
+}
+.background-resultados{
+	height: 700px;
+	background-image:url("img/fundo01.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	
+}
+.seta{
+	margin-top:px;
+	width:13px;
+	height:13px;
+}
