@@ -13,5 +13,10 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="src/lib/commons-collections4-4.1-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/lib/commons-collections4-4.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/lib/commons-lang3-3.5-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/lib/commons-lang3-3.5-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/lib/commons-lang3-3.5.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
