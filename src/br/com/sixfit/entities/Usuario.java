@@ -4,6 +4,8 @@ import java.sql.Date;
 
 public class Usuario {
 	
+	private Long id;
+
 	private String nome;
 	private String email;
 	private String genero;
@@ -13,10 +15,30 @@ public class Usuario {
 	
 	private String senha;
 	
+	public Usuario() {
+		super();
+	}
+	
 	public Usuario(String nome, String email) {
 		super();
 		this.nome = nome;
 		this.email = email;
+	}
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 	public String getNome() {
