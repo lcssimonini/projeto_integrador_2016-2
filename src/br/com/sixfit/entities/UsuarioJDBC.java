@@ -1,9 +1,15 @@
 package br.com.sixfit.entities;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
+import br.com.sixfit.constants.SQLConstants;
+import br.com.sixfit.dao.DAOUtil;
 import br.com.sixfit.dao.UsuarioDAO;
 import br.com.sixfit.db.Connectionfactory;
 
@@ -58,9 +64,18 @@ public class UsuarioJDBC implements UsuarioDAO {
 	}
 
 	@Override
-	public void changePassword(Usuario user) throws Exception {
-		// TODO Auto-generated method stub
+	public void changePassword(Usuario usuario) throws Exception {
+		if (usuario.getId() == null) {
+			throw new IllegalArgumentException("Usuario não foi salvo, não é possível mudar a senha");
+	    }
 		
+		List<Object> values = new LinkedList<Object>();
+		values.add(usuario.getSenha());
+		values.add(usuario.getId());
+
+        Connection connection = connectionFactory.getConnection();
+        PreparedStatement statement = DAOUtil.prepareStatement(connection, SQLConstants.SQL_CHANGE_PASSWORD, false, values);
+        statement.executeUpdate();
 	}
 	
    private static Usuario map(ResultSet resultSet) throws SQLException {
