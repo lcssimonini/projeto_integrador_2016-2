@@ -32,10 +32,9 @@ public class DBProperties {
 
         if (property == null || property.trim().length() == 0) {
             if (mandatory) {
-                throw new Exception("Required property '" + fullKey + "'"
-                    + " is missing in properties file '" + PROPERTIES_FILE + "'.");
+                throw new Exception("A propriedade '" + fullKey + "'"
+                    + " não existe no arquivo '" + PROPERTIES_FILE + "'.");
             } else {
-                // Make empty value null. Empty Strings are evil.
                 property = null;
             }
         }

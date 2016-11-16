@@ -9,24 +9,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.sixfit.bos.UsuarioBO;
+import br.com.sixfit.entities.Usuario;
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
-       
-	private static final long serialVersionUID = 2502414678075409075L;
+@WebServlet("/cadastro")
+public class CadastroServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 4088447823106399481L;
 	
-    public LoginServlet() {
-        super();
-    }
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		if (UsuarioBO.login(request)) {
-			System.out.println("login sucesso");
-			response.sendRedirect("resultados");
+		Usuario usuario = null;
+		
+		try {
+			usuario = UsuarioBO.createUsuario(request);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		if (usuario != null) {
+			response.sendRedirect("cadastro_sucesso");
 		} else {
-			System.out.println("login fracasso");
-			response.sendRedirect("/");
-		}		
+			response.sendRedirect("cadastro");
+		}
+		
 	}
 }

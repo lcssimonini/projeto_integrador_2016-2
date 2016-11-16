@@ -12,9 +12,9 @@ public interface UsuarioDAO {
 
     public List<Usuario> findAll() throws Exception;
 
-    public void create(Usuario user) throws IllegalArgumentException, Exception;
+    public Usuario create(Usuario user) throws IllegalArgumentException, Exception;
 
-    public void update(Usuario user) throws IllegalArgumentException, Exception;
+    public Usuario update(Usuario user) throws IllegalArgumentException, Exception;
 
     public void delete(Usuario user) throws Exception;
 

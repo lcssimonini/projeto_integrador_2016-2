@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -17,7 +16,7 @@ public class UsuarioJDBC implements UsuarioDAO {
 	
 	private Connectionfactory connectionFactory;
 	 
-	UsuarioJDBC(Connectionfactory connectionFactory) {
+	public UsuarioJDBC(Connectionfactory connectionFactory) {
 		this.connectionFactory = connectionFactory;
 	}
 
@@ -40,15 +39,15 @@ public class UsuarioJDBC implements UsuarioDAO {
 	}
 
 	@Override
-	public void create(Usuario user) throws IllegalArgumentException, Exception {
+	public Usuario create(Usuario user) throws IllegalArgumentException, Exception {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
-	public void update(Usuario user) throws IllegalArgumentException, Exception {
+	public Usuario update(Usuario user) throws IllegalArgumentException, Exception {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override

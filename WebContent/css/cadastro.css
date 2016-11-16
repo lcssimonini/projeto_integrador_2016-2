@@ -10,6 +10,7 @@
 }
 .form-total{
     margin: auto;
+    height: 650px;
 }
 .titulodocadastro{
     text-align: center;
@@ -67,7 +68,7 @@ body{
 }
 .background-resultados{
 	height: 700px;
-	background-image:url("img/fundo01.jpg");
+	background-image:url("/sixfit/img/fundo01.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	

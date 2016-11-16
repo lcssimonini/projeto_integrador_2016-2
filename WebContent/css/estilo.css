@@ -1002,5 +1002,5 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
 
 .background {
 	background-size:100% 100%;
-	background-image: url("img/fundo.jpg");
+	background-image: url("/sixfit/img/fundo.jpg");
 }

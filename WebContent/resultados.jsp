@@ -5,21 +5,20 @@
 	<link rel="shortcut icon" href="img/favicon.ico" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="estilo.css" rel="stylesheet" type="text/css" />
-	<link href="cadastrocss.css" rel="stylesheet" type="text/css" />
-	<script src="javascript.js" type="text/javascript"></script>
+	<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+	<link href="css/cadastro.css" rel="stylesheet" type="text/css" />
 	<script>
-		function lerDados(){
-			var vetRespostas = new Array();
-			vetRespostas = sessionStorage.alternativas;
-			for(var i=0; i<vetRespostas.lenght; i++){
-				alert(vetRespostas[i]);
-			}
-		}
+//		function lerDados(){
+//			var vetRespostas = new Array();
+//			vetRespostas = sessionStorage.alternativas;
+//			for(var i=0; i<vetRespostas.lenght; i++){
+//				alert(vetRespostas[i]);
+//			}
+//		}
 	</script>
 </head>
 
-<body onload="lerDados()">
+<body>
 
 	<div class="container-fluid">
 		<a id="home"></a>

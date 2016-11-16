@@ -21,10 +21,10 @@ public class Connectionfactory {
         this.password = password;
     }
 
-    public static Connectionfactory getInstance(String name) throws Exception {
+    public static Connectionfactory getInstance() throws Exception {
     	Connectionfactory instance;
 
-        DBProperties properties = new DBProperties(name);
+        DBProperties properties = new DBProperties("sixfit");
         
         String url = properties.getProperty(PROPERTY_URL, true);
         String driverClassName = properties.getProperty(PROPERTY_DRIVER, false);
