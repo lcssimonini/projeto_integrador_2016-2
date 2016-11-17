@@ -22,8 +22,8 @@ public final class DAOUtil {
     public static void setValues(PreparedStatement statement, List<Object> values) throws SQLException {
     	
     	int index = 0;
-    	for (Iterator iterator = values.iterator(); iterator.hasNext();) {
-			Object object = (Object) iterator.next();			
+    	for (Iterator<Object> iterator = values.iterator(); iterator.hasNext();) {
+			Object object = iterator.next();			
 			statement.setObject(index , object);
 			index++;
 		}

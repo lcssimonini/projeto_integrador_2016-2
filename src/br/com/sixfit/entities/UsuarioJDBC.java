@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,26 +24,57 @@ public class UsuarioJDBC implements UsuarioDAO {
 
 	@Override
 	public Usuario find(Long id) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return find(SQLConstants.SQL_FIND_BY_ID, Arrays.asList(new Object[] {id}));
 	}
 
 	@Override
 	public Usuario findByEmail(String email) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return find(SQLConstants.SQL_FIND_BY_EMAIL, Arrays.asList(new Object[] {email}));
 	}
 
 	@Override
 	public List<Usuario> findAll() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		List<Usuario> usuarios = new ArrayList<Usuario>();
+
+        Connection connection = connectionFactory.getConnection();
+        PreparedStatement statement = connection.prepareStatement(SQLConstants.SQL_FIND_ALL);
+        ResultSet resultSet = statement.executeQuery();
+        
+        while (resultSet.next()) {
+            usuarios.add(map(resultSet));
+        }
+
+        return usuarios;
 	}
 
 	@Override
-	public Usuario create(Usuario user) throws IllegalArgumentException, Exception {
-		// TODO Auto-generated method stub
-		return null;
+	public Usuario create(Usuario usuario) throws IllegalArgumentException, Exception {
+	    if (usuario.getId() != null) {
+            throw new IllegalArgumentException("Usuário já existe na base.");
+        }
+	    
+        Object[] values = {
+        	usuario.getNome(),
+            usuario.getEmail(),
+            usuario.getAltura(),
+            usuario.getPeso(),
+            usuario.getGenero(),
+            usuario.getNascimento(),
+            usuario.getSenha()
+        };
+
+        Connection connection = connectionFactory.getConnection();
+        PreparedStatement statement = DAOUtil.prepareStatement(connection, SQLConstants.SQL_INSERT, true, Arrays.asList(values));
+
+        try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+            if (generatedKeys.next()) {
+                usuario.setId(generatedKeys.getLong(1));
+            } else {
+                throw new Exception("Erro ao criar usuário.");
+            }
+        }
+        
+        return usuario;
 	}
 
 	@Override
@@ -61,6 +94,25 @@ public class UsuarioJDBC implements UsuarioDAO {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	private Usuario find(String sql, List<Object> values) throws Exception {
+		Usuario user = null;
+
+        try (
+            Connection connection = connectionFactory.getConnection();
+            PreparedStatement statement = DAOUtil.prepareStatement(connection, sql, false, values);
+            ResultSet resultSet = statement.executeQuery();
+        ) {
+            if (resultSet.next()) {
+                user = map(resultSet);
+            }
+        } catch (SQLException e) {
+        	e.printStackTrace();
+        }
+
+        return user;
+    }
+
 
 	@Override
 	public void changePassword(Usuario usuario) throws Exception {
