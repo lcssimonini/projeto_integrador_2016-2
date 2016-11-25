@@ -10,6 +10,7 @@ public class Connectionfactory {
     private static final String PROPERTY_DRIVER = "driver";
     private static final String PROPERTY_USERNAME = "username";
     private static final String PROPERTY_PASSWORD = "password";
+    private static final String PROPERTY_DB_NAME = "sixfit";
     
     private String url;
     private String username;
@@ -23,17 +24,16 @@ public class Connectionfactory {
 
     public static Connectionfactory getInstance() throws Exception {
     	Connectionfactory instance;
-
-        DBProperties properties = new DBProperties("sixfit");
-        
+    	
+        DBProperties properties = new DBProperties(PROPERTY_DB_NAME);        
         String url = properties.getProperty(PROPERTY_URL, true);
-        String driverClassName = properties.getProperty(PROPERTY_DRIVER, false);
+        String driverName = properties.getProperty(PROPERTY_DRIVER, false);
         String password = properties.getProperty(PROPERTY_PASSWORD, false);
         String username = properties.getProperty(PROPERTY_USERNAME, password != null);
         
 
 	    try {
-	    	Class.forName(driverClassName);
+	    	Class.forName(driverName);
 	    } catch (ClassNotFoundException e) {
 	    	e.printStackTrace();
 	    }

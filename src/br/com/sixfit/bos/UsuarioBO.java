@@ -4,6 +4,9 @@ import java.sql.Date;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.xml.bind.ValidationException;
+
+import org.apache.commons.lang3.StringUtils;
 
 import br.com.sixfit.db.Connectionfactory;
 import br.com.sixfit.entities.Usuario;
@@ -28,7 +31,15 @@ public class UsuarioBO {
 		String nascimento = request.getParameter("nascimento");
 		String peso = request.getParameter("peso");
 		String altura = request.getParameter("altura");
+		
 		String senha = request.getParameter("senha");
+		String confSenha = request.getParameter("confirmarsenha");
+		
+		if (!StringUtils.isEmpty(senha)) {
+			if (!senha.equals(confSenha)) {
+				throw new ValidationException("senha", "a senha deve ser igual � confirma��o de senha");
+			}
+		}
 		
 		Usuario usuario = new Usuario(nome, email);
 		usuario.setAltura(Float.valueOf(altura));
@@ -38,6 +49,10 @@ public class UsuarioBO {
 		usuario.setSenha(senha);
 		
 		return usuariojdbc.create(usuario);
+	}
+	
+	private String parseDate(String date) {
+		
 	}
 	
 	public static void logout(HttpServletRequest request) {

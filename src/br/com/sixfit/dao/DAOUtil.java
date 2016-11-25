@@ -10,11 +10,12 @@ import java.util.List;
 
 public final class DAOUtil {
 
-    public static PreparedStatement prepareStatement (Connection connection, String sql, boolean returnGeneratedKeys, List<Object> values)
-            throws SQLException {
+    public static PreparedStatement prepareStatement (
+    		Connection connection, String sql, boolean returnGeneratedKeys, List<Object> values) throws SQLException {
         
     	PreparedStatement statement = connection.prepareStatement(sql,
             returnGeneratedKeys ? Statement.RETURN_GENERATED_KEYS : Statement.NO_GENERATED_KEYS);
+    	
         setValues(statement, values);
         return statement;
     }
@@ -30,6 +31,6 @@ public final class DAOUtil {
     }
 
     public static Date toSqlDate(java.util.Date date) {
-     return (date != null) ? new Date(date.getTime()) : null;
+    	return (date != null) ? new Date(date.getTime()) : null;
     }
 }

@@ -32,14 +32,16 @@
             </div>  
            
 				   <div class="form-geral col-dg-12 col-dm-12 col-dp-12 background">
-						<form class="form-horizontal">
+						
+						<form action="cadastro" method="POST" class="form-horizontal">
+						
 							<div class="form-total col-dg-6">
 									 <div class="col-dg-12"> <p class="titulodocadastro">CADASTRO</p></div>
 								<!-- nome-->
 								<div class="form-group">
 									<label class="col-md-4 control-label" for="Nome Completo">Nome Completo:</label>
 									<div class="col-md-5">
-										<input id="NomeCompleto" name="NomeCompleto" placeholder=" Digite aqui o nome completo" class="inputg" required=""
+										<input id="NomeCompleto" name="nome" placeholder=" Digite aqui o nome completo" class="inputg" required=""
 											type="text">
 
 									</div>
@@ -73,7 +75,7 @@
 								<div class="form-group">
 									<label class="col-md-4 control-label" for="nascdate">Data de nascimento:</label>
 									<div class="col-md-4">
-										<input id="nascdate" name="nascdate" placeholder=" DD/MM/AA" class="inputm" required="" type="text">
+										<input id="nascdate" name="nascimento" placeholder=" DD/MM/AA" class="inputm" required="" type="text">
 
 									</div>
 								</div>
@@ -97,20 +99,11 @@
 									</div>
 								</div>
 
-								<!-- usuario-->
-								<div class="form-group">
-									<label class="col-md-4 control-label" for="nomeusuario">Usuário:</label>
-									<div class="col-md-4">
-										<input id="nomeusuario" name="nomeusuario" placeholder=" Escolha um nome de usuário" class="inputg" required="" type="text">
-
-									</div>
-								</div>
-
 								<!-- senha-->
 								<div class="form-group">
 									<label class="col-md-4 control-label" for="senhacadastrada">Senha:</label>
 									<div class="col-md-4">
-										<input id="senhacadastrada" name="senhacadastrada" placeholder=" Digite uma senha" class="inputg" required=""
+										<input id="senhacadastrada" name="senha" placeholder=" Digite uma senha" class="inputg" required=""
 											type="password">
 
 									</div>
@@ -122,17 +115,16 @@
 									<div class="col-md-4">
 										<input id="confirmarsenha" name="confirmarsenha" placeholder=" Digite sua senha novamente" class="inputg" required=""
 											type="password">
-
 									</div>
 								</div>
 								<!-- botao -->
 								<div class="form-group">
 									<label class="col-md-4 control-label" for="confirmacadastro"></label>
 									<div class="col-md-4">
+										<input type="submit" value="enviar">
 										<button id="confirmacadastro" name="confirmacadastro" class="btn" onclick="">Finalizar Cadastro </button>
 									</div>
 								</div>
-
 							</div>
 						</form>
                     </div>

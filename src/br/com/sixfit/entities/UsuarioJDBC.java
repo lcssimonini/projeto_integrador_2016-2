@@ -50,7 +50,7 @@ public class UsuarioJDBC implements UsuarioDAO {
 	@Override
 	public Usuario create(Usuario usuario) throws IllegalArgumentException, Exception {
 	    if (usuario.getId() != null) {
-            throw new IllegalArgumentException("Usuário já existe na base.");
+            throw new IllegalArgumentException("UsuÃ¡rio jÃ¡ existe na base.");
         }
 	    
         Object[] values = {
@@ -64,13 +64,14 @@ public class UsuarioJDBC implements UsuarioDAO {
         };
 
         Connection connection = connectionFactory.getConnection();
-        PreparedStatement statement = DAOUtil.prepareStatement(connection, SQLConstants.SQL_INSERT, true, Arrays.asList(values));
+        PreparedStatement statement = DAOUtil.prepareStatement(
+        		connection, SQLConstants.SQL_INSERT, true, Arrays.asList(values));
 
         try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
             if (generatedKeys.next()) {
                 usuario.setId(generatedKeys.getLong(1));
             } else {
-                throw new Exception("Erro ao criar usuário.");
+                throw new Exception("Erro ao criar usuÃ¡rio.");
             }
         }
         
@@ -117,7 +118,7 @@ public class UsuarioJDBC implements UsuarioDAO {
 	@Override
 	public void changePassword(Usuario usuario) throws Exception {
 		if (usuario.getId() == null) {
-			throw new IllegalArgumentException("Usuario não foi salvo, não é possível mudar a senha");
+			throw new IllegalArgumentException("Usuario nÃ£o foi salvo, nÃ£o Ã© possÃ­vel mudar a senha");
 	    }
 		
 		List<Object> values = new LinkedList<Object>();

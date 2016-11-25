@@ -20,20 +20,20 @@ public class DBProperties {
         }
     }
 
-    private String key;
+    private String dbName;
 
-    public DBProperties(String specificKey) throws Exception {
-        this.key = specificKey;
+    public DBProperties(String dbName) throws Exception {
+        this.dbName = dbName;
     }
 
     public String getProperty(String key, boolean mandatory) throws Exception {
-        String fullKey = key + "." + key;
+        String fullKey = this.dbName + "." + key;
         String property = PROPERTIES.getProperty(fullKey);
 
         if (property == null || property.trim().length() == 0) {
             if (mandatory) {
                 throw new Exception("A propriedade '" + fullKey + "'"
-                    + " n√£o existe no arquivo '" + PROPERTIES_FILE + "'.");
+                    + " n„o existe no arquivo '" + PROPERTIES_FILE + "'.");
             } else {
                 property = null;
             }
