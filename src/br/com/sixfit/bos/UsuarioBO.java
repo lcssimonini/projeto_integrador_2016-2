@@ -51,9 +51,9 @@ public class UsuarioBO {
 		return usuariojdbc.create(usuario);
 	}
 	
-	private String parseDate(String date) {
-		
-	}
+//	private String parseDate(String date) {
+//		
+//	}
 	
 	public static void logout(HttpServletRequest request) {
 		HttpSession session = request.getSession();

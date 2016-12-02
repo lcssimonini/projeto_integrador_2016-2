@@ -28,7 +28,7 @@ padding:3px;
 
 .header{
 position:fixed;
-background-color:#464646;
+background-color:black;
 height: 70px;
 width: 100%;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -183,6 +183,31 @@ div.box .button{
 	color:white;
 	float:left;
 	margin-top:-7px;
+}
+
+.botao1 {
+	font-family: Trebuchet MS;
+	font-weight:bold;
+	margin: 40px 0 0 40%;
+	text-align:center;
+	width:140px;
+	padding:12px;
+	border: 2px #EAEAEA solid;
+	text-decoration:none;
+	transition: all 0.3s;
+	cursor:pointer;
+}
+
+.botao1 a{
+	text-decoration:none;
+	color:white;
+}
+
+.botao1:hover {
+	background-color:#E27D15;
+	color:black;
+	border: 2px #E27D15 solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 }
@@ -371,6 +396,31 @@ div.box .button{
 	color:white;
 	float:left;
 	margin-top:-7px;
+}
+
+.botao1 {
+	font-family: Trebuchet MS;
+	font-weight:bold;
+	margin: 40px 0 0 40%;
+	text-align:center;
+	width:140px;
+	padding:12px;
+	border: 2px #EAEAEA solid;
+	text-decoration:none;
+	transition: all 0.3s;
+	cursor:pointer;
+}
+
+.botao1 a{
+	text-decoration:none;
+	color:white;
+}
+
+.botao1:hover {
+	background-color:#E27D15;
+	color:black;
+	border: 2px #E27D15 solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -565,6 +615,31 @@ div.box .button{
 	margin-top:-7px;
 }
 
+.botao1 {
+	font-family: Trebuchet MS;
+	font-weight:bold;
+	margin: 40px 0 0 40%;
+	text-align:center;
+	width:140px;
+	padding:12px;
+	border: 2px #EAEAEA solid;
+	text-decoration:none;
+	transition: all 0.3s;
+	cursor:pointer;
+}
+
+.botao1 a{
+	text-decoration:none;
+	color:white;
+}
+
+.botao1:hover {
+	background-color:#E27D15;
+	color:black;
+	border: 2px #E27D15 solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 }
 
 /*TELA EXTRA GRANDE*/
@@ -756,6 +831,31 @@ div.box .button{
 	float:left;
 	margin:58px -119px;
 }	
+
+.botao1 {
+	font-family: Trebuchet MS;
+	font-weight:bold;
+	margin: 40px 0 0 35%;
+	text-align:center;
+	width:140px;
+	padding:12px;
+	border: 2px #EAEAEA solid;
+	text-decoration:none;
+	transition: all 0.3s;
+	cursor:pointer;
+}
+
+.botao1 a{
+	text-decoration:none;
+	color:white;
+}
+
+.botao1:hover {
+	background-color:#E27D15;
+	color:black;
+	border: 2px #E27D15 solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 	
 }
 
@@ -890,7 +990,7 @@ h4 {color:#E27D15;}
 	margin-top: 61px;
 }
 
-form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
+form,input,select,textarea{margin:0; padding:0; color:black;;}
 
 .box {
     width:100%;
@@ -901,7 +1001,7 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
 
 .rodape {
 	width: 100%;
-	background-image: url("/sixfit/img/footer-bg.jpg");
+	background-image: url("../img/footer-bg.jpg");
 }
 
 .contato1 img {
@@ -1000,7 +1100,145 @@ form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
 }
 
 
+
+
+
 .background {
 	background-size:100% 100%;
 	background-image: url("/sixfit/img/fundo.jpg");
+}
+.corfonte{
+	color:black;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	font-family: Trebuchet MS;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+	margin-top: 120px;
+	margin-left:50%;
+	left: -175px;
+    padding: 0;
+    border: 1px solid #888;
+    width: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+	font-family: Trebuchet MS;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: GREY;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {	
+    padding: 2px 20px;
+    background-color: #FF961E;
+    color: white;
+}
+
+.modal-body {
+	height: 230px;
+	padding: 20px;
+}
+
+.botao2 {
+	font-family: Trebuchet MS;
+	font-weight:bold;
+	margin-left: 50%;
+	position: relative;
+	left: -85px;
+	text-align:center;
+	width:150px;
+	padding:12px;
+	border: 2px #EAEAEA solid;
+	text-decoration:none;
+	transition: all 0.3s;
+	cursor:pointer;
+}
+
+.botao2 a{
+	text-decoration:none;
+	color: black;
+}
+
+.botao2:hover {
+	background-color:#E27D15;
+	border: 2px #E27D15 solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#email{
+	width:280px;
+	height: 20px;
+
+}
+#senhalogin{
+	width:280px;
+	height: 20px;
+
+}
+.form-group{
+	margin-left: 13px;
+}
+.botaologin {
+	font-family: Trebuchet MS;
+	font-weight:bold;
+	margin: auto;
+	text-align:center;
+	width:100px;
+	padding:6px;
+	border: 2px #EAEAEA solid;
+	text-decoration:none;
+	transition: all 0.3s;
+	cursor:pointer;
+}
+
+.botaologin a{
+	text-decoration:none;
+	color: black;
+}
+
+.botaologin:hover {
+	background-color:#E27D15;
+	border: 2px #E27D15 solid;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
