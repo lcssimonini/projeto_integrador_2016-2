@@ -37,7 +37,7 @@ public class UsuarioBO {
 		
 		if (!StringUtils.isEmpty(senha)) {
 			if (!senha.equals(confSenha)) {
-				throw new ValidationException("senha", "a senha deve ser igual � confirma��o de senha");
+				throw new ValidationException("senha", "a senha deve ser igual à confirmação de senha");
 			}
 		}
 		
@@ -50,10 +50,6 @@ public class UsuarioBO {
 		
 		return usuariojdbc.create(usuario);
 	}
-	
-//	private String parseDate(String date) {
-//		
-//	}
 	
 	public static void logout(HttpServletRequest request) {
 		HttpSession session = request.getSession();
