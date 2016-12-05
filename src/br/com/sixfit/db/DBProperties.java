@@ -33,7 +33,7 @@ public class DBProperties {
         if (property == null || property.trim().length() == 0) {
             if (mandatory) {
                 throw new Exception("A propriedade '" + fullKey + "'"
-                    + " n„o existe no arquivo '" + PROPERTIES_FILE + "'.");
+                    + " n√£o existe no arquivo '" + PROPERTIES_FILE + "'.");
             } else {
                 property = null;
             }

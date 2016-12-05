@@ -210,6 +210,12 @@ div.box .button{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.inputg{
+    color: black;
+    width: 80%;
+    height: 25px
+}
+
 }
 
 
@@ -423,6 +429,11 @@ div.box .button{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.inputg{
+    color: black;
+    width: 70%;
+    height: 25px
+}
 
 }
 
@@ -640,6 +651,12 @@ div.box .button{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.inputg{
+    color: black;
+    width: 90%;
+    height: 25px
+}
+
 }
 
 /*TELA EXTRA GRANDE*/
@@ -855,6 +872,12 @@ div.box .button{
 	color:black;
 	border: 2px #E27D15 solid;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inputg{
+    color: black;
+    width: 90%;
+    height: 25px
 }
 	
 }
@@ -1105,7 +1128,7 @@ form,input,select,textarea{margin:0; padding:0; color:black;;}
 
 .background {
 	background-size:100% 100%;
-	background-image: url("/sixfit/img/fundo.jpg");
+	background-image: url("../img/fundo.jpg");
 }
 .corfonte{
 	color:black;
@@ -1140,8 +1163,8 @@ form,input,select,textarea{margin:0; padding:0; color:black;;}
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
-	font-family: Trebuchet MS;
+    animation-duration: 0.4s;
+    font-family: Trebuchet MS;
 }
 
 /* Add Animation */
@@ -1206,11 +1229,16 @@ form,input,select,textarea{margin:0; padding:0; color:black;;}
 	border: 2px #E27D15 solid;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#email{
-	width:280px;
-	height: 20px;
+
+#email1{
+	width:250px;
 
 }
+
+#email2{
+	width:280px;
+}
+
 #senhalogin{
 	width:280px;
 	height: 20px;
