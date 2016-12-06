@@ -1,5 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
-
 <head>
 	<title>Sixfit - Cadastro</title>
 	<link rel="shortcut icon" href="img/favicon.ico" />
@@ -39,7 +39,7 @@
                                                 <div class="col-dg-12"> <p class="titulodocadastro">CADASTRO</p></div>
                                                  <!-- nome-->
                                                  <div class="form-group">
-                                                         <label class="col-md-4 control-label" for="Nome Completo">Nome Completo:</label>
+                                                         <label class="col-md-4 control-label" for="Nome Completo">Nome Completo: ${usuario.nome} cadastrado</label>
                                                          <div class="col-md-5">
                                                                  <input id="NomeCompleto" name="nome" placeholder=" Digite aqui o nome completo" class="inputg" required=""
                                                                          type="text">
@@ -51,7 +51,7 @@
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="email">Email:</label>
                                                          <div class="col-md-5">
-                                                                 <input id="email1" name="email" placeholder=" Digite aqui seu email" class="inputg" required="" type="text">
+                                                                 <input id="email1" name="email" placeholder=" Digite aqui seu email" class="inputg" type="text">
 
                                                          </div>
                                                  </div>
@@ -75,7 +75,7 @@
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="nascdate">Data de nascimento:</label>
                                                          <div class="col-md-4">
-                                                                 <input id="nascdate" name="nascimento" placeholder=" DD/MM/AA" class="inputm" required="" type="text">
+                                                                 <input id="nascdate" name="nascimento" placeholder=" DD/MM/AA" class="inputm" type="text">
 
                                                          </div>
                                                  </div>
@@ -84,7 +84,7 @@
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="peso">Peso:</label>
                                                          <div class="col-md-2">
-                                                                 <input id="peso" name="peso" placeholder=" 000" class="inputp" required="" type="text">
+                                                                 <input id="peso" name="peso" placeholder=" 000" class="inputp" type="text">
                                                                  <span>kg </span>
 
                                                          </div>
@@ -94,7 +94,7 @@
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="altura">Altura</label>
                                                          <div class="col-md-2">
-                                                                 <input id="altura" name="altura" placeholder=" 0,00" class="inputp" required="" type="text">
+                                                                 <input id="altura" name="altura" placeholder=" 0,00" class="inputp" type="text">
                                                                  <span>m (em metros)</span>
                                                          </div>
                                                  </div>
@@ -103,7 +103,7 @@
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="senhacadastrada">Senha:</label>
                                                          <div class="col-md-4">
-                                                                 <input id="senhacadastrada" name="senha" placeholder=" Digite uma senha" class="inputg" required=""
+                                                                 <input id="senhacadastrada" name="senha" placeholder=" Digite uma senha" class="inputg"
                                                                          type="password">
 
                                                          </div>
@@ -113,7 +113,7 @@
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="confirmarsenha">Confirme a senha:</label>
                                                          <div class="col-md-4">
-                                                                 <input id="confirmarsenha" name="confirmarsenha" placeholder=" Digite sua senha novamente" class="inputg" required=""
+                                                                 <input id="confirmarsenha" name="confirmarsenha" placeholder=" Digite sua senha novamente" class="inputg"
                                                                          type="password">
                                                          </div>
                                                  </div>
@@ -127,7 +127,7 @@
                                  </form>
                             </div>  
                             
-                            <div class="col-dg-4 col-deg-4 col-dm-6 col-dp-12">
+                            <div class="col-dg-4 col-deg-4 col-dm-6 esconde">
                                     <div class="imgCadastro">
                                         <img align="center" src="img/7.png" alt="Logo" Title="SixFit - Experimente uma sabor novo de viver">
                                         <p style="font-size: 17px; color:white; font-weight: bold;">O programa proposto pela <a href="index.html" title="Sixfit para você!">SIXFIT</a> é uma avaliação física inicial que tem o objetivo de identificar o nível de aptidão física atual do cliente, permitindo que os exercícios possam ser indicados de acordo com suas necessidades e seus objetivos.<br><br></p>

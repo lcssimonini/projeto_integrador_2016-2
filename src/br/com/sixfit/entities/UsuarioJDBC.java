@@ -56,17 +56,19 @@ public class UsuarioJDBC implements UsuarioDAO {
         Object[] values = {
         	usuario.getNome(),
             usuario.getEmail(),
-            usuario.getAltura(),
-            usuario.getPeso(),
             usuario.getGenero(),
             usuario.getNascimento(),
+            usuario.getPeso(),
+            usuario.getAltura(),
             usuario.getSenha()
         };
 
         Connection connection = connectionFactory.getConnection();
         PreparedStatement statement = DAOUtil.prepareStatement(
         		connection, SQLConstants.SQL_INSERT, true, Arrays.asList(values));
-
+        
+        statement.execute();
+        
         try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
             if (generatedKeys.next()) {
                 usuario.setId(generatedKeys.getLong(1));
@@ -138,9 +140,9 @@ public class UsuarioJDBC implements UsuarioDAO {
        usuario.setNome(resultSet.getString("nome"));
        usuario.setEmail(resultSet.getString("email"));
        usuario.setGenero(resultSet.getString("genero"));
-       usuario.setNascimento(resultSet.getDate("nascimento"));
-       usuario.setPeso(resultSet.getFloat("peso"));
-       usuario.setAltura(resultSet.getFloat("altura"));
+       usuario.setNascimento(resultSet.getString("nascimento"));
+       usuario.setPeso(resultSet.getString("peso"));
+       usuario.setAltura(resultSet.getString("altura"));
        usuario.setSenha(resultSet.getString("senha"));
        
        return usuario;

@@ -2,6 +2,8 @@ package br.com.sixfit.entities;
 
 import java.sql.Date;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Usuario {
 	
 	private Long id;
@@ -62,20 +64,32 @@ public class Usuario {
 	public Date getNascimento() {
 		return nascimento;
 	}
-	public void setNascimento(Date nascimento) {
-		this.nascimento = nascimento;
+	public void setNascimento(String nascimento) {
+		if (!StringUtils.isEmpty(nascimento)) {
+			this.nascimento = Date.valueOf(nascimento);
+		} else {
+			this.nascimento = null;
+		}
 	}
 	public Float getPeso() {
 		return peso;
 	}
-	public void setPeso(Float peso) {
-		this.peso = peso;
+	public void setPeso(String peso) {
+		if (!StringUtils.isEmpty(peso)) {
+			this.peso = Float.valueOf(peso);
+		} else {
+			this.peso = null;
+		}
 	}
 	public Float getAltura() {
 		return altura;
 	}
-	public void setAltura(Float altura) {
-		this.altura = altura;
+	public void setAltura(String altura) {
+		if (!StringUtils.isEmpty(altura)) {
+			this.altura = Float.valueOf(altura);
+		} else {
+			this.altura = null;
+		}
 	}
 
 	@Override

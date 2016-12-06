@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.sixfit.bos.LoginBO;
 import br.com.sixfit.bos.UsuarioBO;
 import br.com.sixfit.entities.Usuario;
 
@@ -27,9 +28,10 @@ public class CadastroServlet extends HttpServlet {
 		}
 		
 		if (usuario != null) {
-			response.sendRedirect("cadastro_sucesso");
+			request.setAttribute(LoginBO.USUARIO_LOGADO, usuario);
+			request.getRequestDispatcher("cadastro.jsp").forward(request, response);
 		} else {
-			response.sendRedirect("cadastro");
+			response.sendRedirect("cadastro.html");
 		}
 		
 	}

@@ -42,10 +42,10 @@ public class UsuarioBO {
 		}
 		
 		Usuario usuario = new Usuario(nome, email);
-		usuario.setAltura(Float.valueOf(altura));
-		usuario.setPeso(Float.valueOf(peso));
+		usuario.setAltura(altura);
+		usuario.setPeso(peso);
 		usuario.setGenero(genero);
-		usuario.setNascimento(Date.valueOf(nascimento));
+		usuario.setNascimento(nascimento);
 		usuario.setSenha(senha);
 		
 		return usuariojdbc.create(usuario);
