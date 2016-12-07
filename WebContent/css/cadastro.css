@@ -11,7 +11,7 @@
 }
 .form-total{
     margin: auto;
-    height: 650px;
+    min-height: 650px;
 }
 .titulodocadastro{
     text-align: center;
@@ -39,6 +39,12 @@
 .imgCadastro{
     margin-top: 113px;
 }
+
+.imgAtividades{
+    margin-top: 89px;
+    cursor: pointer;
+}
+
 
 .imgCadastro p span{
     text-align: right;
@@ -68,6 +74,10 @@
 
 .imgCadastro img{
     width: 100%;
+}
+
+.imgAtividades img{
+    width: 30%;
 }
 
 .btn{
@@ -115,3 +125,28 @@ body{
 	width:13px;
 	height:13px;
 }
+
+.imgAtiv{
+	margin-left:3%;
+	float:left;
+	width: 30%;
+	height: 70%;
+	background-image: url("../img/8.0.jpg");
+}
+
+.imgAtiv1{
+	margin-left:3%;
+	float:left;
+	width: 30%;
+	height: 70%;
+	background-image: url("../img/9.0.jpg");
+}
+
+.imgAtiv2{
+	margin-left:3%;
+	float:left;
+	width: 30%;
+	height: 70%;
+	background-image: url("../img/10.0.jpg");
+}
+
