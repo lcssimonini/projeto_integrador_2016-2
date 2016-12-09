@@ -1,6 +1,6 @@
 * {box-sizing: border-box}
 
-body {margin:0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
+body {margin:0; font-family: Calibri;}
 
 [class^="col-"] {
 width:100%;
@@ -23,9 +23,13 @@ padding:3px;
 .col-dp-11{width:91.65%}
 .col-dp-12{width:100%}
 
+
+/*ESCONDER AS LATERAIS PARA TELAS MENORES*/
 .esconde{display: none;}
 .escondemeio {display: none;}
 
+
+/*MENU*/
 .header{
 position:fixed;
 background-color:black;
@@ -48,6 +52,13 @@ z-index: 99;
 }
 
 
+.slideshow-container {
+  margin-top: 74px;
+}
+
+
+
+/*O QUE FAZEMOS*/
 .quadro {
 	margin:auto;
 	width:95%;
@@ -267,6 +278,9 @@ margin: 6px 7px 3px 60px;
     margin-top: -13px;
 }
 
+.slideshow-container {
+  margin-top: -9px;
+}
 
 .quadro {
 	margin:auto;
@@ -423,12 +437,16 @@ div.box .button{
 
 .botao1 a{
 	text-decoration:none;
-	color:#E27D15
+	color:white;
+}
+
+.botao1 a:HOVER{
+	text-decoration:none;
+	color:white;
 }
 
 .botao1:hover {
 	background-color:#E27D15;
-	color:black;
 	border: 2px #E27D15 solid;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -666,12 +684,10 @@ div.box .button{
 ul.topnav span{
       display: none;
   }
--
-.csslider1 {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  margin-top: -20px;
+
+
+.slideshow-container {
+  margin-top: -9px;
 }
 }
 
@@ -713,6 +729,11 @@ margin: 6px 7px 3px 60px;
 	height: 85px;
     margin-top: -13px;
 	
+}
+
+
+.slideshow-container {
+  margin-top: -9px;
 }
 
 
@@ -916,6 +937,9 @@ ul.topnav span{
 
 
 /*HEADER*/
+
+.header{margin-top: -4px}
+
 #menu ul {
 	padding: 24px;
     list-style: none;
@@ -1024,7 +1048,7 @@ h4 {color:#E27D15;}
 }
 
 
-
+/*RODAPE*/
 .rodape {
 	width: 100%;
 	background-image: url("../img/footer-bg.jpg");
@@ -1128,15 +1152,14 @@ h4 {color:#E27D15;}
 
 
 
-
+/*BACKGROUND RODAPE*/
 .background {
 	background-size:100% 100%;
 	background-image: url("../img/fundo.jpg");
 }
-.corfonte{
-	color:black;
-}
-/* The Modal (background) */
+
+
+/*MODAL LOGIN*/
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -1251,6 +1274,8 @@ h4 {color:#E27D15;}
 .form-group{
 	margin-left: 13px;
 }
+
+/*MENU RESPONSIVO*/
 .botaologin {
 	font-family: Trebuchet MS;
 	font-weight:bold;
@@ -1286,11 +1311,8 @@ ul.topnav {
   padding: 0;
   overflow: hidden;
   float: right;
-  width: 100%;
-  background-color: black;
-  border-radius: 0px 0px 20px 20px;
+  width: 70%;
 margin-top:-4px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 ul.topnav li {float: left;}
@@ -1299,7 +1321,7 @@ ul.topnav li a {
   display: inline-block;
   color: #f2f2f2;
   text-align: center;
-  padding: 36px 16px;
+  padding: 35px 16px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
@@ -1310,46 +1332,143 @@ ul.topnav li a:hover {background-color:#E27D15 ;}
 
 ul.topnav li.icon {display: none;}
 
-@media screen and (max-width:1185px) {
-  ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block;
-    margin-right: 22px;
-  }
-  
-  ul.topnav li img{
-  	width: 25px;
-  	height: 25px;
-  }
+.sidenav{
+	display: none;
+}
+
+.header span{
+	display: none;
+}
+
+
+@media screen and (max-width:1269px) {
+
+.header span img{
+	width: 26px;
+	height: 26px;
+	float: right;
+	margin: 28px 37px 0 0;
+}	
+	
+.header span{
+	display: block;
+	color:white;
+}	
+
+ul.topnav {
+display: none
+}
+
+#mySidenav{
+	margin-left: 100%;
+	left: -250px;
+}
+
+.sidenav {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 
 }
 
-@media screen and (max-width:1185px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top:-1px;
-  }
-  
-   ul.topnav li img{
-  	width: 25px;
-  	height: 25px;
-  }
 
-  ul.topnav.responsive li {
-    float: none;
-    display: inline;
-	font-size:50px;
-   
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: center;
-    margin-top:50px;
-  }
+
+/*SLIDER*/
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 2em;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: -30PX 0 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 
 
