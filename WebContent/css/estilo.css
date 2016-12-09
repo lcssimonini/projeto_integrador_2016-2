@@ -1,6 +1,6 @@
 * {box-sizing: border-box}
 
-body {margin:0; font-family:Calibri;}
+body {margin:0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
 
 [class^="col-"] {
 width:100%;
@@ -56,8 +56,7 @@ z-index: 99;
 }
 
 .numero {
-	font-size:55px;
-	font-family:Calibri;
+	font-size:80px;
 	font-weight:bold;
 	color:#EAEAEA;
 	letter-spacing: -3px;
@@ -73,7 +72,6 @@ z-index: 99;
 }
 
 .quadro p{
-	font-family:Calibri;
 	color:#c1b4b4;
 }
 
@@ -128,8 +126,8 @@ div.box label {
 
 div.box label span {
     display: block;
-    color:white;
-    font-size:12px;
+    color:#E27D15;
+    font-size:14px;
     float:left;
     width: 10%;
     text-align:right;
@@ -137,27 +135,25 @@ div.box label span {
 }
 
 div.box .input_text {
+    color: #E27D15;
     padding:10px 10px;
     width:80%;
 	margin-left: 27px;
-    background: #f2e8e8;
-    border-bottom: 1px double #E27D15;
-    border-top: 1px double #E27D15;
-    border-left:1px double #E27D15;
-    border-right:1px double #E27D15;
+    background: black;
+    border: 2px double #E27D15;
+    border-radius: 5px;
 }
 
 div.box .message{
+    color:#E27D15;
     padding:7px 7px;
     width: 80%;
 	margin-left: 27px;
-    background:#f2e8e8;
-    border-bottom: 1px double #E27D15;
-    border-top: 1px double #E27D15;
-    border-left:1px double #E27D15;
-    border-right:1px double #E27D15;
+    background:black;
+    border: 2px solid #E27D15;
     overflow:hidden;
     height:150px;
+    border-radius: 5px;
 }
 
 div.box .button{
@@ -193,7 +189,7 @@ div.box .button{
 	text-align:center;
 	width:140px;
 	padding:12px;
-	border: 2px #EAEAEA solid;
+	border: 2px #E27D15 solid;
 	text-decoration:none;
 	transition: all 0.3s;
 	cursor:pointer;
@@ -201,7 +197,7 @@ div.box .button{
 
 .botao1 a{
 	text-decoration:none;
-	color:white;
+	color:#E27D15;
 }
 
 .botao1:hover {
@@ -225,6 +221,12 @@ div.box .button{
   position: relative;
   width: 100%;
   margin-top: 78px;
+}
+.menu {
+    float: left;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
 }
 }
 
@@ -274,8 +276,7 @@ margin: 6px 7px 3px 60px;
 }
 
 .numero {
-	font-size:55px;
-	font-family:Calibri;
+	font-size:80px;
 	font-weight:bold;
 	color:#EAEAEA;
 	letter-spacing: -3px;
@@ -291,7 +292,6 @@ margin: 6px 7px 3px 60px;
 }
 
 .quadro p{
-	font-family:Calibri;
 	color:#c1b4b4;
 }
 
@@ -352,8 +352,8 @@ div.box label {
 
 div.box label span {
     display: block;
-    color:white;
-    font-size:12px;
+    color:#E27D15;
+    font-size:14px;
     float:left;
     width: 10%;
     text-align:right;
@@ -361,27 +361,25 @@ div.box label span {
 }
 
 div.box .input_text {
+    color: #E27D15;
     padding:10px 10px;
     width:70%;
 	margin-left: 27px;
-    background: #f2e8e8;
-    border-bottom: 1px double #E27D15;
-    border-top: 1px double #E27D15;
-    border-left:1px double #E27D15;
-    border-right:1px double #E27D15;
+    background: black;
+    border: 2px double #E27D15;
+    border-radius: 1px;
 }
 
 div.box .message{
+    color:#E27D15;
     padding:7px 7px;
     width: 70%;
 	margin-left: 27px;
-    background:#f2e8e8;
-    border-bottom: 1px double #E27D15;
-    border-top: 1px double #E27D15;
-    border-left:1px double #E27D15;
-    border-right:1px double #E27D15;
+    background:black;
+    border: 2px solid #E27D15;
     overflow:hidden;
     height:150px;
+    border-radius: 5px;
 }
 
 div.box .button{
@@ -417,7 +415,7 @@ div.box .button{
 	text-align:center;
 	width:140px;
 	padding:12px;
-	border: 2px #EAEAEA solid;
+	border: 2px #E27D15 solid;
 	text-decoration:none;
 	transition: all 0.3s;
 	cursor:pointer;
@@ -425,7 +423,7 @@ div.box .button{
 
 .botao1 a{
 	text-decoration:none;
-	color:white;
+	color:#E27D15
 }
 
 .botao1:hover {
@@ -443,13 +441,13 @@ div.box .button{
   ul.topnav span{
       display: block;
   }
+ 
   .csslider1 {
   display: inline-block;
   position: relative;
   width: 100%;
   margin-top: -20px;
 }
-
 }
 
 
@@ -502,8 +500,7 @@ margin: 6px 7px 3px 60px;
 }
 
 .numero {
-	font-size:55px;
-	font-family:Calibri;
+	font-size:80px;
 	font-weight:bold;
 	color:#EAEAEA;
 	letter-spacing: -3px;
@@ -519,7 +516,6 @@ margin: 6px 7px 3px 60px;
 }
 
 .quadro p{
-	font-family:Calibri;
 	color:#c1b4b4;
 }
 
@@ -579,8 +575,8 @@ div.box label {
 
 div.box label span {
     display: block;
-    color:white;
-    font-size:12px;
+    color:#E27D15;
+    font-size:14px;
     float:left;
     width: 10%;
     text-align:right;
@@ -588,27 +584,25 @@ div.box label span {
 }
 
 div.box .input_text {
+    color: #E27D15;
     padding:10px 10px;
     width:70%;
 	margin-left: 27px;
-    background: #f2e8e8;
-    border-bottom: 1px double #E27D15;
-    border-top: 1px double #E27D15;
-    border-left:1px double #E27D15;
-    border-right:1px double #E27D15;
+    background: black;
+    border: 2px double #E27D15;
+    border-radius: 5px;
 }
 
 div.box .message{
+    color: #E27D15;
     padding:7px 7px;
     width: 70%;
 	margin-left: 27px;
-    background:#f2e8e8;
-    border-bottom: 1px double #E27D15;
-    border-top: 1px double #E27D15;
-    border-left:1px double #E27D15;
-    border-right:1px double #E27D15;
+    background:black;
+    border: 2px solid #E27D15;
     overflow:hidden;
     height:150px;
+    border-radius: 5px;
 }
 
 div.box .button{
@@ -645,7 +639,7 @@ div.box .button{
 	text-align:center;
 	width:140px;
 	padding:12px;
-	border: 2px #EAEAEA solid;
+	border: 2px #E27D15 solid;
 	text-decoration:none;
 	transition: all 0.3s;
 	cursor:pointer;
@@ -653,7 +647,7 @@ div.box .button{
 
 .botao1 a{
 	text-decoration:none;
-	color:white;
+	color:#E27D15;
 }
 
 .botao1:hover {
@@ -730,8 +724,7 @@ margin: 6px 7px 3px 60px;
 }
 
 .numero {
-	font-size:55px;
-	font-family:Calibri;
+	font-size:80px;
 	font-weight:bold;
 	color:#EAEAEA;
 	letter-spacing: -3px;
@@ -747,7 +740,6 @@ margin: 6px 7px 3px 60px;
 }
 
 .quadro p{
-	font-family:Calibri;
 	color:#c1b4b4;
 }
 
@@ -807,8 +799,8 @@ div.box label {
 
 div.box label span {
     display: block;
-    color:white;
-    font-size:12px;
+    color:#E27D15;
+    font-size:14px;
     float:left;
     width: 10%;
     text-align:right;
@@ -816,27 +808,25 @@ div.box label span {
 }
 
 div.box .input_text {
+    color: #E27D15;
     padding:10px 10px;
     width:60%;
 	margin-left: 27px;
-    background: #f2e8e8;
-    border-bottom: 1px double #E27D15;
-    border-top: 1px double #E27D15;
-    border-left:1px double #E27D15;
-    border-right:1px double #E27D15;
+    background: black;
+    border: 2px double #E27D15;
+    border-radius: 5px;
 }
 
 div.box .message{
+    color:#E27D15;
     padding:7px 7px;
     width: 60%;
 	margin-left: 27px;
-    background:#f2e8e8;
-    border-bottom: 1px double #E27D15;
-    border-top: 1px double #E27D15;
-    border-left:1px double #E27D15;
-    border-right:1px double #E27D15;
+    background:black;
+    border: 2px solid #E27D15;
     overflow:hidden;
     height:150px;
+    border-radius: 5px;
 }
 
 div.box .button{
@@ -874,7 +864,7 @@ div.box .button{
 	text-align:center;
 	width:140px;
 	padding:12px;
-	border: 2px #EAEAEA solid;
+	border: 2px #E27D15 solid;
 	text-decoration:none;
 	transition: all 0.3s;
 	cursor:pointer;
@@ -882,7 +872,7 @@ div.box .button{
 
 .botao1 a{
 	text-decoration:none;
-	color:white;
+	color:#E27D15;
 }
 
 .botao1:hover {
@@ -1027,8 +1017,6 @@ h4 {color:#E27D15;}
 .imgexercicio{
 	margin-top: 61px;
 }
-
-form,input,select,textarea{margin:0; padding:0; color:black;;}
 
 .box {
     width:100%;
@@ -1247,16 +1235,17 @@ form,input,select,textarea{margin:0; padding:0; color:black;;}
 
 #email1{
 	width:250px;
-
+    height: 25px;
 }
 
 #email2{
 	width:280px;
+    height: 25px;
 }
 
 #senhalogin{
 	width:280px;
-	height: 20px;
+    height: 25px;
 
 }
 .form-group{
