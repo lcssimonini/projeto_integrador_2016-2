@@ -11,7 +11,7 @@
 }
 .form-total{
     margin: auto;
-    min-height: 650px;
+	
 }
 .titulodocadastro{
     text-align: center;
@@ -101,21 +101,41 @@ body{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .dadosresultados{
-	margin-top: -225px;
 	position: relative;
-	top:50%;
-	margin-left: 80px;
+	margin: 10% 0 0 10%;
 	padding: 20px;
 	height: 450px;
 	width:300px;
 	color: black;
-	background-color: white;
-	opacity: 0.5;
-	border-radius: 5px
+	border-radius: 5px;
+	background-image:url("../img/resultados01.jpg");
+	background-repeat: no-repeat;
+}
+.dadosresultados1{
+	position: relative;
+	margin: 10% 0 0 10%;
+	padding: 20px;
+	height: 450px;
+	width:300px;
+	color: black;
+	border-radius: 5px;
+	background-image:url("../img/resultados02.jpg");
+	background-repeat: no-repeat;
+}
+.dadosresultados2{
+	position: relative;
+	margin: 10% 0 0 10%;
+	padding: 20px;
+	height: 450px;
+	width:300px;
+	color: black;
+	border-radius: 5px;
+	background-image:url("../img/resultados03.jpg");
+	background-repeat: no-repeat;
 }
 .background-resultados{
 	height: 700px;
-	background-image:url("/sixfit/img/fundo01.jpg");
+	background-image:url("../img/fundo01.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	

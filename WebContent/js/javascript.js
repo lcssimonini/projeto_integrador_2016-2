@@ -1,8 +1,4 @@
-var g_cronometro;
-var g_figuraAtual = 1;
- 
-        
-
+/*MENU RESPONSIVO*/
 function openNav() {
     document.getElementById("mySidenav").style.display = "block";
 }
@@ -13,7 +9,7 @@ function closeNav() {
 
 
 
-
+/*SLIDESHOW*/
 var slideIndex = 0;
 showSlides();
 
@@ -32,4 +28,10 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+
+
+function valida() {
+	alert("Leo");
+	
 }

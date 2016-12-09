@@ -3,7 +3,6 @@
 <head>
 	<title>Sixfit - Resultados</title>
 	<link rel="shortcut icon" href="img/favicon.ico" />
-	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/estilo.css" rel="stylesheet" type="text/css" />
 	<link href="css/cadastro.css" rel="stylesheet" type="text/css" />
@@ -43,15 +42,9 @@
 		   
 		   <!-- Corpo -->
 		   
-		   
-				   <div class="form-geral col-deg-8 col-dg-12 col-dm-12 col-dp-12">
-				   <br>
-					<br>
-					<br>
-					<br>
-						<form class="form-horizontal">
-							
-							<div class="form-total col-deg-8 col-dg-8 background-resultados">
+		  	 <div class="linha">
+				   <div class="form-total col-deg-12 col-dg-12 col-dm-12 col-dp-12 background-resultados">
+						<div class="centro">
 									 <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados">
 										<h3><img src="img/analise.png"width="28px" height="23px">Análise</h3>
 									     <p><img class="seta" src="img/seta.png">Nome:</p>
@@ -63,21 +56,27 @@
 									     <p><img class="seta" src="img/seta.png">Calorias ingeridas:</p>
 									     <p><img class="seta" src="img/seta.png">Condição física:</p>
 									 </div>
-									 <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12">								 
-									 </div>
+
 									
-									 <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados">
-									 <h3><img src="img/sugestao.png" width="22px" height="20px">Sugestões</h3>
+									 <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados1">
+									 <h3><img src="img/sugestao.png" width="22px" height="20px">Ideal / Atividades</h3>
 									     <p><img class="seta" src="img/seta.png">IMC Ideal: </p>
 									     <p><img class="seta" src="img/seta.png">Peso Ideal: </p>
 									     <p><img class="seta" src="img/seta.png">Esportes: </p>
 									     <p><img class="seta" src="img/seta.png">Frequência: </p>
-										 </div>
-								</div>	 
+								     </div>
+								     
+								     <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados2">
+									 <h3><img src="img/indicacao.png" width="22px" height="20px">Indicações Fit</h3>
+									     <p><img class="seta" src="img/seta.png">Academias: </p>
+									     <p><img class="seta" src="img/seta.png">Nutricionistas: </p>
+								     </div>
+
 									 
 							
-						</form>
+                    		</div>
                     </div>
+              </div>      
 
 					<!-- Rodapé -->
 					<div class="linha rodape">
