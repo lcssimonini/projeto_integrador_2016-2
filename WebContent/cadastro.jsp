@@ -244,26 +244,6 @@
 	</div>	
 			
 </body>
-	<script>
-		function enviarInformações(){
-			var nome;
-			var sexo;
-			var peso;
-			var altura;
-			var vetRespostas = new Array();
-			nome = document.getElementsById("NomeCompleto);
-			sexo = document.getElementsById("NomeCompleto);
-			peso = document.getElementsById("NomeCompleto);
-			altura = document.getElementsById("NomeCompleto);
-			vetRespostas[0] = nome;
-			vetRespostas[1] = sexo;
-			vetRespostas[2] = peso;
-			vetRespostas[3] = altura;
-			
-			//armazenando na seção do navegador o vetor contendo as alternativas selecionadas pelo usuario
-			sessionStorage.respostas = vetRespostas;
-			window.open("resultados.html","_self");
-		}
-			
-	</script>
+<script src="js/jquery-3.1.1.js" type="text/javascript"></script>
+<script src="js/jquery-ui.js" type="text/javascript"></script>
 </html>

@@ -22,7 +22,7 @@ public class LogoutServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		UsuarioBO.logout(request);
+		LoginBO.logout(request);
 		System.out.println("usuario deslogado");
 		response.sendRedirect("deslogado");
 	}

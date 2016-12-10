@@ -1,20 +1,12 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
-
 <head>
 	<title>Sixfit - Resultados</title>
 	<link rel="shortcut icon" href="img/favicon.ico" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/estilo.css" rel="stylesheet" type="text/css" />
 	<link href="css/cadastro.css" rel="stylesheet" type="text/css" />
-	<script>
-//		function lerDados(){
-//			var vetRespostas = new Array();
-//			vetRespostas = sessionStorage.alternativas;
-//			for(var i=0; i<vetRespostas.lenght; i++){
-//				alert(vetRespostas[i]);
-//			}
-//		}
-	</script>
+
 </head>
 
 <body>
@@ -47,14 +39,14 @@
 						<div class="centro">
 									 <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados">
 										<h3><img src="img/analise.png"width="28px" height="23px">Análise</h3>
-									     <p><img class="seta" src="img/seta.png">Nome:</p>
-									     <p><img class="seta" src="img/seta.png">Peso:</p>
-									     <p><img class="seta" src="img/seta.png">Status:</p>
-									     <p><img class="seta" src="img/seta.png">Altura:</p>
-									     <p><img class="seta" src="img/seta.png">IMC:</p>
-									     <p><img class="seta" src="img/seta.png">Status:</p>
-									     <p><img class="seta" src="img/seta.png">Calorias ingeridas:</p>
-									     <p><img class="seta" src="img/seta.png">Condição física:</p>
+									     <p><img class="seta" src="img/seta.png">Nome: ${usuario.nome}</p>
+									     <p><img class="seta" src="img/seta.png">Peso: ${usuario.peso}</p>
+									     <p><img class="seta" src="img/seta.png">Status: ${usuario.getStatusPeso()}</p>
+									     <p><img class="seta" src="img/seta.png">Altura: ${usuario.altura}</p>
+									     <p><img class="seta" src="img/seta.png">IMC: ${usuario.getImc()}</p>
+									     <p><img class="seta" src="img/seta.png">Status: ${usuario.nome}</p>
+									     <p><img class="seta" src="img/seta.png">Calorias ingeridas: ${usuario.nome}</p>
+									     <p><img class="seta" src="img/seta.png">Condição física: ${usuario.nome}</p>
 									 </div>
 
 									
@@ -172,4 +164,6 @@
 	</div>	
 			
 </body>
+<script src="js/jquery-3.1.1.js" type="text/javascript"></script>
+<script src="js/jquery-ui.js" type="text/javascript"></script>
 </html>

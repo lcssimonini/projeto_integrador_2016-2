@@ -1,8 +1,12 @@
 package br.com.sixfit.entities;
 
 import java.sql.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 import org.apache.commons.lang3.StringUtils;
+
+import br.com.sixfit.bos.FitnessBO;
 
 public class Usuario {
 	
@@ -17,14 +21,35 @@ public class Usuario {
 	
 	private String senha;
 	
-	public Usuario() {
-		super();
-	}
-	
 	public Usuario(String nome, String email) {
 		super();
 		this.nome = nome;
 		this.email = email;
+	}
+	
+	public Usuario() {
+		super();
+	}
+	
+	public Integer getIdade() {
+		GregorianCalendar hj=new GregorianCalendar();
+		GregorianCalendar nascimento=new GregorianCalendar();
+		
+		if(nascimento != null){
+			nascimento.setTime(nascimento.getTime());
+		}		
+		
+		int anohj=hj.get(Calendar.YEAR);
+		int anoNascimento=nascimento.get(Calendar.YEAR);
+		return new Integer(anohj-anoNascimento);
+	}
+	
+	public String getStatusPeso() {
+		return FitnessBO.getStatusPeso(this);
+	}
+	
+	public Double getImc() {
+		return (peso / (Math.pow(altura.doubleValue(), 2)));
 	}
 	
 	public Long getId() {

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.sixfit.entities.Usuario;
 
-@WebServlet("/teste")
+@WebServlet("/resultado")
 public class ResultadoServlet extends HttpServlet {
 
 	private static final long serialVersionUID = -4664070306917670997L;

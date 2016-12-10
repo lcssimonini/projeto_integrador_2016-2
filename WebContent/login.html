@@ -1,9 +1,34 @@
-<html>
-	<body>
-		<form action="login" method="POST">
-			 <input type="text" value="email" placeholder="EMAIL">
-			 <input type="text" value="senha" placeholder="SENHA">
-			 <input type="submit" value="Enviar">
-		</form>
-	</body>
-</html>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">×</span>
+            <h2>Login</h2>
+        </div>
+        <div class="modal-body">
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="email">Email:</label>  
+                <div class="col-md-4">
+                    <input id="email2" name="email" type="text" placeholder="Digite o email" class="form-control input-md" required="">
+                </div>
+            </div>
+            <!-- Password input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label senha" for="senhalogin">Senha:</label>
+                <div class="col-md-4">
+                    <input id="senhalogin" name="senhalogin" type="password" placeholder="Digite a senha" class="form-control input-md" required="">
+                </div>
+            </div>
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="botaologin"></label>
+                <div class="col-md-4">
+                    <br>
+                    <button id="botaologin" name="botaologin" class="btn btn-primary botao2">CONFIRMAR LOGIN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
