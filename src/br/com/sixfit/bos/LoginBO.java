@@ -37,9 +37,7 @@ public class LoginBO {
 		Usuario usuario = null;
 		
 		try {
-			if (usuariojdbc.existEmail(email)) {
-				usuario = usuariojdbc.findByEmail(email);
-			}
+			usuario = usuariojdbc.findByEmail(email);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

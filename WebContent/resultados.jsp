@@ -40,10 +40,11 @@
 									 <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados">
 										<h3><img src="img/analise.png"width="28px" height="23px">Análise</h3>
 									     <p><img class="seta" src="img/seta.png">Nome: ${usuario.nome}</p>
+									     <p><img class="seta" src="img/seta.png">Idade: ${usuario.getIdade()}</p>
 									     <p><img class="seta" src="img/seta.png">Peso: ${usuario.peso}</p>
 									     <p><img class="seta" src="img/seta.png">Status: ${usuario.getStatusPeso()}</p>
 									     <p><img class="seta" src="img/seta.png">Altura: ${usuario.altura}</p>
-									     <p><img class="seta" src="img/seta.png">IMC: ${usuario.getImc()}</p>
+									     <p><img class="seta" src="img/seta.png">IMC: ${usuario.getFormattedImc()}</p>
 									     <p><img class="seta" src="img/seta.png">Status: ${usuario.nome}</p>
 									     <p><img class="seta" src="img/seta.png">Calorias ingeridas: ${usuario.nome}</p>
 									     <p><img class="seta" src="img/seta.png">Condição física: ${usuario.nome}</p>

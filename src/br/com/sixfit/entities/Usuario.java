@@ -1,6 +1,7 @@
 package br.com.sixfit.entities;
 
 import java.sql.Date;
+import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -32,15 +33,15 @@ public class Usuario {
 	}
 	
 	public Integer getIdade() {
-		GregorianCalendar hj=new GregorianCalendar();
-		GregorianCalendar nascimento=new GregorianCalendar();
+		GregorianCalendar today = new GregorianCalendar();
+		GregorianCalendar nascimento = new GregorianCalendar();
 		
 		if(nascimento != null){
-			nascimento.setTime(nascimento.getTime());
+			nascimento.setTime(this.nascimento);
 		}		
 		
-		int anohj=hj.get(Calendar.YEAR);
-		int anoNascimento=nascimento.get(Calendar.YEAR);
+		int anohj = today.get(Calendar.YEAR);
+		int anoNascimento = nascimento.get(Calendar.YEAR);
 		return new Integer(anohj-anoNascimento);
 	}
 	
@@ -50,6 +51,10 @@ public class Usuario {
 	
 	public Double getImc() {
 		return (peso / (Math.pow(altura.doubleValue(), 2)));
+	}
+	
+	public String getFormattedImc() {
+		return new DecimalFormat("#.##").format(getImc());
 	}
 	
 	public Long getId() {
@@ -91,7 +96,20 @@ public class Usuario {
 	}
 	public void setNascimento(String nascimento) {
 		if (!StringUtils.isEmpty(nascimento)) {
-			this.nascimento = Date.valueOf(nascimento);
+			String[] values = nascimento.split("/");
+			StringBuilder builder = new StringBuilder();
+			
+			if (values.length == 3) {
+				builder.append(values[2]);
+				builder.append("-");
+				builder.append(values[1]);
+				builder.append("-");
+				builder.append(values[0]);
+			} else {
+				builder.append(nascimento);
+			}
+			
+			this.nascimento = Date.valueOf(builder.toString());
 		} else {
 			this.nascimento = null;
 		}

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.sixfit.bos.LoginBO;
-import br.com.sixfit.bos.UsuarioBO;
+import br.com.sixfit.entities.Usuario;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
@@ -18,14 +18,23 @@ public class LoginServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		if (LoginBO.login(request)) {
-			System.out.println("login sucesso");
-			
-			request.setAttribute("usuario", LoginBO.getUsuarioLogado(request));
-			request.getRequestDispatcher("lances.jsp").forward(request, response);
+		Usuario usuario = LoginBO.getUsuarioLogado(request);
+		
+		
+		if (usuario != null) {
+			request.setAttribute("usuario", usuario);
+			request.getRequestDispatcher("resultados.jsp").forward(request, response);
 		} else {
-			System.out.println("login fracasso");
-			response.sendRedirect("/");
-		}		
+			if (LoginBO.login(request)) {
+				System.out.println("login sucesso");
+				
+				request.setAttribute("usuario", LoginBO.getUsuarioLogado(request));
+				request.getRequestDispatcher("resultados.jsp").forward(request, response);
+			} else {
+				System.out.println("login fracasso");
+				response.sendRedirect("/sixfit/");
+			}	
+		}
+	
 	}
 }
