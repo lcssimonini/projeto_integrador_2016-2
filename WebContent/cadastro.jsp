@@ -1,57 +1,36 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
-
-<head>
-	<title>Sixfit - Cadastro</title>
-	<link rel="shortcut icon" href="img/favicon.ico" />
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/estilo.css" rel="stylesheet" type="text/css" />
-	<link href="css/cadastro.css" rel="stylesheet" type="text/css" />
-	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
-
-</head>
-
+<%@include  file="head.html" %>
 <body>
-
 	<div class="container-fluid">
 		<a id="home"></a>
-		
-<!-- Nav -->
 			<div class="linha">
                 <div class="col-dm-1 col-dg-2 col-deg-2 esconde"></div>
-                
                 <div class="col-dp-12 col-dm-10 col-dg-8 col-deg-8">
                         <div class="header">
                                 <div class="logo"><img src="img/logo.png" alt="Logo" Title="SixFit - Página Inicial"></div>
                                 <ul class="topnav" id="myTopnav">
-                                   
                                     <span><li><a class="active" href="#home">Menu</a></li></span>
-                                    <li><a href="#home">Home</a></li>
-                                    <li><a href="#news">O Que Fazemos</a></li>
-                                    <li><a href="#contact">Quem Somos</a></li>
-                                    <li><a href="#about">Contato</a></li>
+                                    <li><a href="/sixfit/">Home</a></li>
+                                    <li><a href="#contact" click="scroll('contact')>Contato</a></li>
                                     <li><button id="myBtn" class="botaologin">LOGIN</button></li>
                                 </ul>
-                                <span style="cursor:pointer" onclick="openNav()"><img src="img/menu.png" alt="Logo" Title="SixFit - Página Inicial"></span>
+                                <span style="cursor:pointer" onclick="openNav()"><img src="img/menu.png" alt="Logo" Title="SixFit - PÃ¡gina Inicial"></span>
                                 <div id="mySidenav" class="sidenav">
 								  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-								  <a href="#">Home</a>
-								  <a href="#">O Que Fazemos</a>
-								  <a href="#">Quem Somos</a>
-								  <a href="#">Contato</a>
+								  <a href="/sixfit/">Home</a>
+								  <a href="#contact">Contato</a>
 								  <button id="myBtn" class="botaologin">LOGIN</button></li>
 								</div>
                         </div>
                  </div>    
-
                 <div class="col-dm-1 col-dg-2 col-deg-2 esconde"></div>
             </div> 
-           
                     <div class="form-geral col-dg-12 col-dm-12 col-dp-12 background">
                             <div class="col-dg-2 col-deg-2 esconde escondemeio"></div>
                             <div class="col-dg-4 col-deg-4 col-dm-6 col-dp-12">
                                  <form action="cadastro" method="POST" class="form-horizontal">
-                                     
                                                 <div class="col-dg-12"> <p class="titulodocadastro">CADASTRO</p></div>
                                                  <!-- nome-->
                                                  <div class="form-group">
@@ -59,22 +38,18 @@
                                                          <div class="col-md-5">
                                                                  <input id="NomeCompleto" name="nome" placeholder=" Digite aqui o nome completo" class="inputg" required=""
                                                                          type="text">
-
                                                          </div>
                                                  </div>
-
                                                  <!-- email-->
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="email">Email:</label>
                                                          <div class="col-md-5">
                                                                  <input id="email1" name="email" placeholder=" Digite aqui seu email" class="inputg" required="" type="text">
-
                                                          </div>
                                                  </div>
-
                                                  <!-- genero -->
                                                  <div class="form-group">
-                                                         <label class="col-md-4 control-label" for="genero">Gênero</label>
+                                                         <label class="col-md-4 control-label" for="genero">GÃªnero</label>
                                                          <div class="col-md-4">
                                                                  <label class="radio-inline" for="genero-0">
                                                                    <input name="genero" id="genero-0" value="1" type="radio">
@@ -86,26 +61,21 @@
                                                                  </label>
                                                          </div>
                                                  </div>
-
                                                  <!-- nascimento-->
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="nascimento">Data de nascimento:</label>
                                                          <div class="col-md-4">
                                                                  <input id="nascimento" name="nascimento" placeholder=" DD/MM/AA" class="inputm" required="" type="text">
-
                                                          </div>
                                                  </div>
-
                                                  <!-- peso-->
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="peso">Peso:</label>
                                                          <div class="col-md-2">
                                                                  <input id="peso" name="peso" placeholder=" 000" class="inputp" required="" type="text">
                                                                  <span>kg </span>
-
                                                          </div>
                                                  </div>
-
                                                  <!-- altura-->
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="altura">Altura</label>
@@ -114,17 +84,14 @@
                                                                  <span>m (em metros)</span>
                                                          </div>
                                                  </div>
-
                                                  <!-- senha-->
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="senhacadastrada">Senha:</label>
                                                          <div class="col-md-4">
                                                                  <input id="senhacadastrada" name="senha" placeholder=" Digite uma senha" class="inputg" required=""
                                                                          type="password">
-
                                                          </div>
                                                  </div>
-
                                                  <!-- confirmar senha-->
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="confirmarsenha">Confirme a senha:</label>
@@ -142,15 +109,14 @@
                                                  </div>
                                  </form>
                             </div>  
-                            
                             <div class="col-dg-4 col-deg-4 col-dm-6 col-dp-12">
                                     <div class="imgCadastro">
                                         <img align="center" src="img/7.png" alt="Logo" Title="SixFit - Experimente uma sabor novo de viver">
-                                        <p style="font-size: 17px; color:white; font-weight: bold;">O programa proposto pela <a href="index.html" title="Sixfit para você!">SIXFIT</a> é uma avaliação física inicial que tem o objetivo de identificar o nível de aptidão física atual do cliente, permitindo que os exercícios possam ser indicados de acordo com suas necessidades e seus objetivos.<br><br></p>
+                                        <p style="font-size: 17px; color:white; font-weight: bold;">O programa proposto pela <a href="index.html" title="Sixfit para vocÃª!">SIXFIT</a> Ã© uma avaliaÃ§Ã£o fÃ­sica inicial que tem o objetivo de identificar o nÃ­vel de aptidÃ£o fÃ­sica atual do cliente, permitindo que os exercÃ­cios possam ser indicados de acordo com suas necessidades e seus objetivos.<br><br></p>
                                         
                                     </div>
                                     <div class="rodapeMsg">
-                                        <p>Conheça nossas redes sociais.</p>
+                                        <p>ConheÃ§a nossas redes sociais.</p>
                                         <div class="redesSociais">
                                             <img src="img/facebook.png" alt="Facebook" Title="SixFit - Facebook">    
                                             <img src="img/instagram.png" alt="Instagram" Title="SixFit - Instagram">  
@@ -158,186 +124,25 @@
                                             <img src="img/snap.png" alt="Snapchat" Title="SixFit - Snapchat">  
                                         </div>
                                     </div>    
-                                
                             </div>
-                            
                             <div class="col-dg-2 col-deg-2 esconde escondemeio"></div>
                     </div>
-
-
-
-<!-- Rdapé -->
-              <div class="linha rodape"><a name="contato"></a>
-				<div class="linha">
-					<div class="col-dg-1 col-deg-1 esconde escondemeio"></div>
-		
-					<div class="col-dp-12 col-dm-8 col-dg-7 col-deg-7">
-							
-							<h4>Contato</h4>
-							<form name="meuForm" method="post" id="formulario">
-								<div class="box"> 
-									<label> 
-										<span>Nome Completo:</span>
-										<input type="text" class="input_text" name="nome" id="name"/>
-									</label>
-							 
-									<label>
-										<span>Email:</span>
-										<input type="text" class="input_text" name="email" id="email"/>
-									 </label>
-							 
-									<label>
-										<span>Assunto:</span>
-										<input type="text" class="input_text" name="assunto" id="subject"/>
-									</label>
-							 
-									<label>
-										 <span>Mensagem</span>
-										<textarea class="message" name="feedback" id="feedback"></textarea><br>
-										<div class="botao1"><a href="cadastro.html" title="Faça agora o seu Cadastro!">Enviar</a></div>
-									</label>           
-								</div>
-							</form>
-
-					</div>
-					
-
-		
-					<div class="col-dm-4 col-dg-3 col-deg-3 esconde">
-						<div class="linha">
-							<div class="col-dm-2 col-dg-1 col-deg-1 esconde"></div>
-							
-							<div class="col-dm-8 col-dg-10 col-deg-10 esconde">
-								<div class="contato1">
-									<img src="img/icon1.png" alt="Logo" Title="SixFit - Página Inicial">
-									<h3>ENDEREÇO</h3>
-									<p>Endereço da Faculdade</p>
-								</div>
-								<div class="contato2">
-									<img src="img/icon2.png" alt="Logo" Title="SixFit - Página Inicial">
-									<h3>TELEFONE</h3>
-									<p>Telefone da Faculdade</p>
-								</div>
-								<div class="contato3">
-									<img src="img/icon3.png" alt="Logo" Title="SixFit - Página Inicial">
-									<h3>EMAIL</h3>
-									<p>sistemasiftm@gmail.com</p>
-								</div>
-							</div>
-							
-							<div class="col-dm-2 col-dg-1 col-deg-1 esconde"></div>
-						</div>
-						
-					</div>
-					
-					<div class="col-dg-1 col-deg-1 esconde escondemeio"></div>
-			
-				</div>
-				
-				<div class="linha borda">
-					<div class="col-dm-2 col-dg-3 col-deg-3 esconde"></div>
-					
-					<div class="col-dp-12 col-dm-8 col-dg-6 col-deg-6">
-						<div class="copyright">
-							<p>Copyright © <a href="#home" title="Sixfit - Página Inicial"><span>SIXFIT</span></a>, Instituto Federal de Educação, Ciência e Tecnologia 2016</p>
-						</div>
-					</div>
-					
-					<div class="col-dm-2 col-dg-3 col-deg-3 esconde">
-						<div class="iftm">
-							<a href="http://www.iftm.edu.br/uberlandiacentro"><img src="img/iftm.png" title="Conheça mais sobre a nossa Universidade" alt="Imagem Logo"></a>
-						</div>
-					</div>
-
-				</div>
-			
-			</div>
+			<%@include  file="footer.html" %> 
         </div> 
-		
-			
 </body>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">×</span>
-      <h2>Login </h2>
-    </div>
-    <div class="modal-body">
-   
-   	<div class="form-group">
-	  <label class="col-md-4 control-label" for="botaologin"></label>
-	  <div class="col-md-4">
-	  	<form action="login" method="POST">
-	  	 	<label class="col-md-4 control-label" for="email">Email:</label>  
-	  		<input id="email2" name="email" type="text" placeholder="Digite o email" class="form-control input-md" required>
-	  		<label class="col-md-4 control-label senha" for="senhalogin">Senha:</label>
-	    	<input id="senha" name="senha" type="password" placeholder="Digite a senha" class="form-control input-md" required>
-	    	<br>
-	    	<br>
-	    	<input type="submit" id="botaologin" name="botaologin" class="btn btn-primary botao2" value="CONFIRMAR LOGIN"></input>
-	    	<p>Não possui cadastro? <a href="cadastro.html" title="Faça seu Cadastro!">Cadastre-se.</p>
-	  	</form>
-	  </div>
-	</div>
-	
-    </div>
-  </div>
-</div>
-
-	</body>
-	<script>
-		// Get the modal
-		var modal = document.getElementById('myModal');
-		
-		// Get the button that opens the modal
-		var btn = document.getElementById("myBtn");
-		
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-		
-		// When the user clicks the button, open the modal
-		btn.onclick = function() {
-		    modal.style.display = "block";
-		}
-		
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-		    modal.style.display = "none";
-		}
-		
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-		    if (event.target == modal) {
-		        modal.style.display = "none";
-		    }
-		}
-	</script>
-
-	<script>
-		$.get( "/sixfit/get_usuario", function( data ) {
-			console.log(data);
-		}, "json" );
-	
-	</script>
-
-  
-<script href="js/javascript.js" type="text/javascript"></script>
-<script src="js/jquery-3.1.1.js" type="text/javascript"></script>
-<script src="js/jquery-ui.js" type="text/javascript"></script>
+<%@include  file="login.html" %>
+</body>
+<%@include  file="scripts.html" %>
 <script>
 	$( document ).ready(function() {
 		$("#nascimento").datepicker({
 		    dateFormat: 'dd/mm/yy',
-		    dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'],
+		    dayNames: ['Domingo','Segunda','TerÃ§a','Quarta','Quinta','Sexta','SÃ¡bado'],
 		    dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
-		    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
-		    monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+		    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','SÃ¡b','Dom'],
+		    monthNames: ['Janeiro','Fevereiro','MarÃ§o','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
 		    monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
-		    nextText: 'Próximo',
+		    nextText: 'PrÃ³ximo',
 		    prevText: 'Anterior',
 		    changeYear: true
 		});

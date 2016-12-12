@@ -22,6 +22,7 @@ public class UsuarioLogadoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		Usuario usuario = LoginBO.getUsuarioLogado(req);
+		
 		if (usuario != null) {
 			Gson gson = new Gson();
 			
