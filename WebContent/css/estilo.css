@@ -1499,3 +1499,8 @@ display: none
   background-color: #E27D15;
 }
 
+
+#senha{
+	width: 280px;
+    height: 25px;
+}

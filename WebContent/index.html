@@ -204,23 +204,23 @@
 								<div class="box"> 
 									<label> 
 										<span>Nome Completo:</span>
-										<input type="text" class="input_text" name="nome" id="name"/>
+										<input type="text" class="input_text" name="nome" id="name" onclick="limpar('name')">
 									</label>
 							 
 									<label>
 										<span>Email:</span>
-										<input type="text" class="input_text" name="email" id="email"/>
+										<input type="text" class="input_text" name="email" id="email" onclick="limpar('email')">
 									 </label>
 							 
 									<label>
 										<span>Assunto:</span>
-										<input type="text" class="input_text" name="assunto" id="subject"/>
+										<input type="text" class="input_text" name="assunto" id="subject" onclick="limpar('subject')">
 									</label>
 							 
 									<label>
 										 <span>Mensagem</span>
-										<textarea class="message" name="feedback" id="feedback"></textarea><br>
-										<div class="botao1"><a href="cadastro.html" title="Faça agora o seu Cadastro!">Enviar</a></div>
+										<textarea class="message" name="feedback" id="feedback" onclick="limpar('feedback')"></textarea><br>
+										<div class="botao1" title="Faça agora o seu Cadastro!" onclick="validar()">Enviar</div>
 									</label>           
 								</div>
 							</form>
@@ -271,7 +271,7 @@
 					
 					<div class="col-dm-2 col-dg-3 col-deg-3 esconde">
 						<div class="iftm">
-							<a href="http://www.iftm.edu.br/uberlandiacentro"><img src="img/iftm.png" title="Conheça mais sobre a nossa Universidade" alt="Imagem Logo"></a>
+							<a href="http://www.iftm.edu.br/uberlandiacentro"><img src="img/iftm.png" title="Conheça mais sobre a nossa Universidade" alt="Imagem Logo" onclick="newPopup()"></a>
 						</div>
 					</div>
 
@@ -287,7 +287,7 @@
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">×</span>
-      <h2>Login</h2>
+      <h2>Login </h2>
     </div>
     <div class="modal-body">
    
@@ -303,13 +303,13 @@
 	    	<br>
 	    	<br>
 	    	<input type="submit" id="botaologin" name="botaologin" class="btn btn-primary botao2" value="CONFIRMAR LOGIN"></input>
+	    	<p>&nbsp&nbspNão possui cadastro? <a href="cadastro.html" title="Faça seu Cadastro!">Cadastre-se.</p>
 	  	</form>
 	  </div>
 	</div>
 	
     </div>
   </div>
-  <div class="botao"><a href="cadastro.html" title="Faça agora o seu Cadastro!">CADASTRE-SE</a></div>
 </div>
 
 	</body>

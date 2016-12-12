@@ -16,19 +16,33 @@
 
 			<!-- Nav -->
 			<div class="linha">
-                <div class="col-dm-1 col-dg-2 esconde"></div>
+                <div class="col-dm-1 col-dg-2 col-deg-2 esconde"></div>
                 
-                <div class="col-dp-12 col-dm-10 col-dg-8">
+                <div class="col-dp-12 col-dm-10 col-dg-8 col-deg-8">
                         <div class="header">
-                            <div class="col-dp-4 col-dm-4 col-dg-4">
-                                <div class="logo"><img src="img/logo.png" alt="Logo" Title="SixFit - Cadastro"></div>
-                            </div> 
-                            <div class="col-dp-8 col-dm-8 col-dg-8">
-                               
-                            </div>
-                        </div>    
-                </div>
-                <div class="col-dm-1 col-dg-2 esconde"></div>
+                                <div class="logo"><img src="img/logo.png" alt="Logo" Title="SixFit - Página Inicial"></div>
+                                <ul class="topnav" id="myTopnav">
+                                   
+                                    <span><li><a class="active" href="#home">Menu</a></li></span>
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#news">O Que Fazemos</a></li>
+                                    <li><a href="#contact">Quem Somos</a></li>
+                                    <li><a href="#about">Contato</a></li>
+                                    <li><button id="myBtn" class="botaologin">LOGIN</button></li>
+                                </ul>
+                                <span style="cursor:pointer" onclick="openNav()"><img src="img/menu.png" alt="Logo" Title="SixFit - Página Inicial"></span>
+                                <div id="mySidenav" class="sidenav">
+								  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+								  <a href="#">Home</a>
+								  <a href="#">O Que Fazemos</a>
+								  <a href="#">Quem Somos</a>
+								  <a href="#">Contato</a>
+								  <button id="myBtn" class="botaologin">LOGIN</button></li>
+								</div>
+                        </div>
+                 </div>    
+
+                <div class="col-dm-1 col-dg-2 col-deg-2 esconde"></div>
             </div>  
            
 		   
