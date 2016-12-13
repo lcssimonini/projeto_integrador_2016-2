@@ -208,7 +208,12 @@ div.box .button{
 
 .botao1 a{
 	text-decoration:none;
-	color:#E27D15;
+	color:white;
+}
+
+.botao1 a:HOVER{
+	text-decoration:none;
+	color:white;
 }
 
 .botao1:hover {
@@ -666,9 +671,13 @@ div.box .button{
 
 .botao1 a{
 	text-decoration:none;
-	color:#E27D15;
+	color:white;
 }
 
+.botao1 a:HOVER{
+	text-decoration:none;
+	color:white;
+}
 .botao1:hover {
 	background-color:#E27D15;
 	color:black;
@@ -895,7 +904,12 @@ div.box .button{
 
 .botao1 a{
 	text-decoration:none;
-	color:#E27D15;
+	color:white;
+}
+
+.botao1 a:HOVER{
+	text-decoration:none;
+	color:white;
 }
 
 .botao1:hover {
