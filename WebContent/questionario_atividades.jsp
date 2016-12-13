@@ -1,24 +1,8 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
-
-<head>
-	<title>Sixfit - Questionários</title>
-	<link rel="shortcut icon" href="img/favicon.ico" />
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/estilo.css" rel="stylesheet" type="text/css" />
-	<link href="css/cadastro.css" rel="stylesheet" type="text/css" />
-	<script src="js/javascript.js" type="text/javascript"></script>
-	<script>
-	
-	function mudarImg(){
-		alert("OI");
-
-	</script>
-
-</head>
-
-<body onload="main()">
-
+<%@include  file="head.html" %>
+<body>
 	<div class="container-fluid">
 		<a id="home"></a>
 
@@ -28,7 +12,7 @@
                 
                 <div class="col-dp-12 col-dm-10 col-dg-8 col-deg-8">
                         <div class="header">
-                                <div class="logo"><img src="img/logo.png" alt="Logo" Title="SixFit - Página Inicial"></div>
+                                <div class="logo"><img src="img/logo.png" alt="Logo" Title="SixFit - PÃ¡gina Inicial"></div>
                                 <ul class="topnav" id="myTopnav">
                                    
                                     <span><li><a class="active" href="#home">Menu</a></li></span>
@@ -38,7 +22,7 @@
                                     <li><a href="#about">Contato</a></li>
                                     <li><button id="myBtn" class="botaologin">LOGIN</button></li>
                                 </ul>
-                                <span style="cursor:pointer" onclick="openNav()"><img src="img/menu.png" alt="Logo" Title="SixFit - Página Inicial"></span>
+                                <span style="cursor:pointer" onclick="openNav()"><img src="img/menu.png" alt="Logo" Title="SixFit - PÃ¡gina Inicial"></span>
                                 <div id="mySidenav" class="sidenav">
 								  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 								  <a href="#">Home</a>
@@ -56,7 +40,7 @@
 		<div class="form-geral col-dg-12 col-dm-12 col-dp-12 background">
 			<div class="col-dg-2 col-deg-2 esconde escondemeio"></div>
 			<div class="col-dg-4 col-deg-4 col-dm-6 col-dp-12">
-				<form action="cadastro" method="POST" class="form-horizontal">
+				<form action="atividades" method="POST" class="form-horizontal">
 
 					<div class="col-dg-12">
 						<p class="titulodocadastro">CADASTRO</p>
@@ -100,34 +84,14 @@
 							<div class="radio">
 								<label for="-1">
 														  <input name="" id="-1" value="2" type="radio">
-														  Não
+														  NÃ£o
 														</label>
 							</div>
 						</div>
 					</div>
 
-					<!-- esportes individuais ou coletivos -->
 					<div class="form-group">
-						<label class="col-md-4 control-label" for="">Prefere esportes: </label>
-						<div class="col-md-4">
-							<div class="radio">
-								<label for="-0">
-														  <input name="" id="-0" value="1" type="radio">
-														  Individuais
-														</label>
-							</div>
-							<div class="radio">
-								<label for="-1">
-														  <input name="" id="-1" value="2" type="radio">
-														  Coletivos
-														</label>
-							</div>
-						</div>
-					</div>
-
-					<!-- esportes individuais -->
-					<div class="form-group">
-						<label class="col-md-4 control-label" for="esportescoletivos">Esportes individuais:</label>
+						<label class="col-md-4 control-label" for="esportescoletivos">Atividades:</label>
 						<div class="col-md-4">
 							<div class="checkbox">
 								<label for="esportescoletivos-0">
@@ -144,16 +108,10 @@
 							<div class="checkbox">
 								<label for="esportescoletivos-2">
 														  <input name="esportescoletivos" id="esportescoletivos-2" value="3" type="checkbox">
-														  Natação
+														  NataÃ§Ã£o
 														</label>
 							</div>
-						</div>
-					</div>
-
-					<!-- esportes coletivos -->
-					<div class="form-group">
-						<label class="col-md-4 control-label" for="esportescoletivos">Esportes coletivos:</label>
-						<div class="col-md-4">
+							
 							<div class="checkbox">
 								<label for="esportescoletivos-0">
 														  <input name="esportescoletivos" id="esportescoletivos-0" value="1" type="checkbox">
@@ -168,9 +126,9 @@
 							</div>
 						</div>
 					</div>
-					<!-- doenças -->
+					<!-- doenÃ§as -->
 					<div class="form-group">
-						<label class="col-md-4 control-label" for="doencas">Alguma doença relevante:</label>
+						<label class="col-md-4 control-label" for="doencas">Alguma doenÃ§a relevante:</label>
 						<div class="col-md-4">
 							<div class="checkbox">
 								<label for="doencas-0">
@@ -193,16 +151,13 @@
 						</div>
 					</div>
 
-
-
 					<!-- botao -->
 					<div class="form-group">
 						<label class="col-md-4 control-label" for="botaoatividades"></label>
 						<div class="col-md-4">
-							<button onclick="enviarInformacoes()" id="botaoatividades" name="botaoatividades" class="btn btn-primary">Submeter questionário</button>
+							<button onclick="enviarInformacoes()" id="botaoatividades" name="botaoatividades" class="btn btn-primary">Submeter questionÃ¡rio</button>
 						</div>
 					</div>
-
 				</form>
 			</div>
 
@@ -211,109 +166,20 @@
 					<div class="imgAtiv"></div>
 					<div class="imgAtiv1"></div>
 					<div class="imgAtiv2"></div>
-
 				</div>
 				<div class="rodapeAtv">
-					<p>Com acompanhamento personalizado e adaptável para te ajudar a praticar exercicios da melhor maneira, permitindo comparar
-						e competir com seus amigos em varios esportes, a SIXFIT levará seus exercicios a outro nível.</p>
+					<p>Com acompanhamento personalizado e adaptÃ¡vel para te ajudar a praticar exercicios da melhor maneira, permitindo comparar
+						e competir com seus amigos em varios esportes, a SIXFIT levarÃ¡ seus exercicios a outro nÃ­vel.</p>
 				</div>
-
 			</div>
-
 			<div class="col-dg-2 col-deg-2 esconde escondemeio"></div>
 		</div>
 
 
 
-		<!-- Rdapé -->
-		<div class="linha rodape">
-			<a name="contato"></a>
-			<div class="linha">
-				<div class="col-dg-1 col-deg-1 esconde escondemeio"></div>
-
-				<div class="col-dp-12 col-dm-8 col-dg-7 col-deg-7">
-
-					<h4>Contato</h4>
-					<form name="meuForm" method="post" id="formulario">
-						<div class="box">
-							<label> 
-										<span>Nome Completo:</span>
-										<input type="text" class="input_text" name="nome" id="name"/>
-									</label>
-
-							<label>
-										<span>Email:</span>
-										<input type="text" class="input_text" name="email" id="email"/>
-									 </label>
-
-							<label>
-										<span>Assunto:</span>
-										<input type="text" class="input_text" name="assunto" id="subject"/>
-									</label>
-
-							<label>
-										 <span>Mensagem</span>
-										<textarea class="message" name="feedback" id="feedback"></textarea><br>
-										<div class="botao1"><a href="" title="Faça agora o seu Cadastro!">Enviar</a></div>
-									</label>
-						</div>
-					</form>
-
-				</div>
-
-
-
-				<div class="col-dm-4 col-dg-3 col-deg-3 esconde">
-					<div class="linha">
-						<div class="col-dm-2 col-dg-1 col-deg-1 esconde"></div>
-
-						<div class="col-dm-8 col-dg-10 col-deg-10 esconde">
-							<div class="contato1">
-								<img src="img/icon1.png" alt="Logo" Title="SixFit - Página Inicial">
-								<h3>ENDEREÇO</h3>
-								<p>Endereço da Faculdade</p>
-							</div>
-							<div class="contato2">
-								<img src="img/icon2.png" alt="Logo" Title="SixFit - Página Inicial">
-								<h3>TELEFONE</h3>
-								<p>Telefone da Faculdade</p>
-							</div>
-							<div class="contato3">
-								<img src="img/icon3.png" alt="Logo" Title="SixFit - Página Inicial">
-								<h3>EMAIL</h3>
-								<p>sistemasiftm@gmail.com</p>
-							</div>
-						</div>
-
-						<div class="col-dm-2 col-dg-1 col-deg-1 esconde"></div>
-					</div>
-
-				</div>
-
-				<div class="col-dg-1 col-deg-1 esconde escondemeio"></div>
-
-			</div>
-
-			<div class="linha borda">
-				<div class="col-dm-2 col-dg-3 col-deg-3 esconde"></div>
-
-				<div class="col-dp-12 col-dm-8 col-dg-6 col-deg-6">
-					<div class="copyright">
-						<p>Copyright © <a href="#home" title="Sixfit - Página Inicial"><span>SIXFIT</span></a>, Instituto Federal de Educação,
-							Ciência e Tecnologia 2016</p>
-					</div>
-				</div>
-
-				<div class="col-dm-2 col-dg-3 col-deg-3 esconde">
-					<div class="iftm">
-						<a href="http://www.iftm.edu.br/uberlandiacentro"><img src="img/iftm.png" title="Conheça mais sobre a nossa Universidade" alt="Imagem Logo"></a>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
+		<!-- RdapÃ© -->
+		<%@include  file="footer.html" %>
 	</div>
 </body>
-
+<%@include  file="scripts.html" %>
 </html>

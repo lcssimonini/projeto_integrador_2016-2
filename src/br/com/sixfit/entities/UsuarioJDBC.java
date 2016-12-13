@@ -60,7 +60,11 @@ public class UsuarioJDBC implements UsuarioDAO {
             usuario.getNascimento(),
             usuario.getPeso(),
             usuario.getAltura(),
-            usuario.getSenha()
+            usuario.getSenha(),
+            usuario.getStatusFumante(),
+            usuario.getStatusAtividade(),
+            usuario.getAtividade(),
+            usuario.getDoenca()
         };
 
         Connection connection = connectionFactory.getConnection();
@@ -80,24 +84,6 @@ public class UsuarioJDBC implements UsuarioDAO {
         return usuario;
 	}
 
-	@Override
-	public Usuario update(Usuario user) throws IllegalArgumentException, Exception {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void delete(Usuario user) throws Exception {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean existEmail(String email) throws Exception {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	
 	private Usuario find(String sql, List<Object> values) throws Exception {
 		Usuario user = null;
 
@@ -120,7 +106,7 @@ public class UsuarioJDBC implements UsuarioDAO {
 	@Override
 	public void changePassword(Usuario usuario) throws Exception {
 		if (usuario.getId() == null) {
-			throw new IllegalArgumentException("Usuario não foi salvo, não é possí­vel mudar a senha");
+			throw new IllegalArgumentException("Usuario não foi salvo, não é possível mudar a senha");
 	    }
 		
 		List<Object> values = new LinkedList<Object>();
@@ -144,7 +130,55 @@ public class UsuarioJDBC implements UsuarioDAO {
        usuario.setPeso(resultSet.getString("peso"));
        usuario.setAltura(resultSet.getString("altura"));
        usuario.setSenha(resultSet.getString("senha"));
+       usuario.setStatusFumante(resultSet.getString("status_fumante"));
+       usuario.setStatusAtividade(resultSet.getString("status_atividade"));
+       usuario.setAtividade(resultSet.getString("atividade"));
+       usuario.setDoenca(resultSet.getString("doenca"));
        
        return usuario;
     }
+
+	@Override
+	public Usuario update(Usuario usuario) throws IllegalArgumentException, Exception {
+	    if (usuario.getId() == null) {
+	    	 throw new IllegalArgumentException("Não é possível atualizar, o usuário não existe na base.");
+		}
+	    
+        Object[] values = {
+        	usuario.getNome(),
+            usuario.getEmail(),
+            usuario.getGenero(),
+            usuario.getNascimento(),
+            usuario.getPeso(),
+            usuario.getAltura(),
+            usuario.getSenha(),
+            usuario.getStatusFumante(),
+            usuario.getStatusAtividade(),
+            usuario.getAtividade(),
+            usuario.getDoenca(),
+            usuario.getId()
+        };
+
+        Connection connection = connectionFactory.getConnection();
+        PreparedStatement statement = DAOUtil.prepareStatement(
+        		connection, SQLConstants.SQL_UPDATE, false, Arrays.asList(values));
+        try {
+        	statement.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+        
+        return usuario;
+	}
+	
+	@Override
+	public void delete(Usuario user) throws Exception {
+		throw new UnsupportedOperationException();		
+	}
+	
+	@Override
+	public boolean existEmail(String email) throws Exception {
+		throw new UnsupportedOperationException();
+	}
 }

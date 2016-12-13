@@ -28,11 +28,11 @@ public class CadastroServlet extends HttpServlet {
 		}
 		
 		if (usuario != null) {
+			LoginBO.login(request, usuario);
 			request.setAttribute(LoginBO.USUARIO_LOGADO, usuario);
-			request.getRequestDispatcher("cadastro.jsp").forward(request, response);
+			request.getRequestDispatcher("questionario_atividades.jsp").forward(request, response);
 		} else {
-			response.sendRedirect("cadastro.html");
-		}
-		
+			response.sendRedirect("questionario_atividades.jsp");
+		}		
 	}
 }

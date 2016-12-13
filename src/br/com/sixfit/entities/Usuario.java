@@ -19,6 +19,10 @@ public class Usuario {
 	private Date nascimento;
 	private Float peso;
 	private Float altura;
+	private String statusFumante;
+	private String statusAtividade;
+	private String atividade;
+	private String doenca;
 	
 	private String senha;
 	
@@ -47,6 +51,22 @@ public class Usuario {
 	
 	public String getStatusPeso() {
 		return FitnessBO.getStatusPeso(this);
+	}
+	
+	public String getPesoMaximo() {
+		return FitnessBO.getPesoMaximo(this);
+	}
+	
+	public String getPesoMinimo() {
+		return FitnessBO.getPesoMinimo(this);
+	}
+	
+	public String getCaloriasDia() {
+		return FitnessBO.getCaloriasDia(this);
+	}
+	
+	public String getPesoIdeal() {
+		return FitnessBO.getPesoIdeal(this);
 	}
 	
 	public Double getImc() {
@@ -127,12 +147,49 @@ public class Usuario {
 	public Float getAltura() {
 		return altura;
 	}
+	
+	public Float getAlturaCM() {
+		return altura*100;
+	}
+	
 	public void setAltura(String altura) {
 		if (!StringUtils.isEmpty(altura)) {
 			this.altura = Float.valueOf(altura);
 		} else {
 			this.altura = null;
 		}
+	}
+
+	public String getStatusFumante() {
+		return statusFumante;
+	}
+
+	public void setStatusFumante(String statusFumante) {
+		this.statusFumante = statusFumante;
+	}
+
+	public String getStatusAtividade() {
+		return statusAtividade;
+	}
+
+	public void setStatusAtividade(String statusAtividade) {
+		this.statusAtividade = statusAtividade;
+	}
+
+	public String getAtividade() {
+		return atividade;
+	}
+
+	public void setAtividade(String atividade) {
+		this.atividade = atividade;
+	}
+
+	public String getDoenca() {
+		return doenca;
+	}
+
+	public void setDoenca(String doenca) {
+		this.doenca = doenca;
 	}
 
 	@Override

@@ -9,3 +9,16 @@ CREATE TABLE usuarios (
 	senha 		varchar(255)		not null,	
 	primary key(id) 
 );
+
+
+ALTER TABLE usuarios
+ADD status_fumante varchar(255);
+
+ALTER TABLE usuarios
+ADD status_atividade varchar(255);
+
+ALTER TABLE usuarios
+ADD atividade varchar(255);
+
+ALTER TABLE usuarios
+ADD doenca varchar(255);

@@ -29,6 +29,10 @@ public class LoginBO {
 		}
 	}
 	
+	public static void login(HttpServletRequest request, Usuario usuario) {
+		request.getSession().setAttribute(LoginBO.USUARIO_LOGADO, usuario);
+	}
+	
 	public static Boolean login(HttpServletRequest request) {
 		Boolean logado = false;
 		String email = request.getParameter("email");

@@ -44,37 +44,47 @@
 		  	 <div class="linha">
 				   <div class="form-total col-deg-12 col-dg-12 col-dm-12 col-dp-12 background-resultados">
 						<div class="centro">
-									 <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados">
-										<h3><img src="img/analise.png"width="28px" height="23px">Análise</h3>
-									     <p><img class="seta" src="img/seta.png">Nome: ${usuario.nome}</p>
-									     <p><img class="seta" src="img/seta.png">Idade: ${usuario.getIdade()}</p>
-									     <p><img class="seta" src="img/seta.png">Peso: ${usuario.peso}</p>
-									     <p><img class="seta" src="img/seta.png">Status: ${usuario.getStatusPeso()}</p>
-									     <p><img class="seta" src="img/seta.png">Altura: ${usuario.altura}</p>
-									     <p><img class="seta" src="img/seta.png">IMC: ${usuario.getFormattedImc()}</p>
-									     <p><img class="seta" src="img/seta.png">Status: ${usuario.nome}</p>
-									     <p><img class="seta" src="img/seta.png">Calorias ingeridas: ${usuario.nome}</p>
-									     <p><img class="seta" src="img/seta.png">Condição física: ${usuario.nome}</p>
-									 </div>
-
-									
-									 <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados1">
-									 <h3><img src="img/sugestao.png" width="22px" height="20px">Ideal / Atividades</h3>
-									     <p><img class="seta" src="img/seta.png">IMC Ideal: </p>
-									     <p><img class="seta" src="img/seta.png">Peso Ideal: </p>
-									     <p><img class="seta" src="img/seta.png">Esportes: </p>
-									     <p><img class="seta" src="img/seta.png">Frequência: </p>
-								     </div>
-								     
-								     <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados2">
-									 <h3><img src="img/indicacao.png" width="22px" height="20px">Indicações Fit</h3>
-									     <p><img class="seta" src="img/seta.png">Academias: </p>
-									     <p><img class="seta" src="img/seta.png">Nutricionistas: </p>
-								     </div>
-
-									 
-							
-                    		</div>
+                                 <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados">
+                                        <h3><img src="img/analise.png"width="28px" height="23px">Análise</h3>
+                                      <p><img class="seta" src="img/seta.png">Nome: ${usuario.nome}</p>
+                                      <p><img class="seta" src="img/seta.png">Idade: ${usuario.getIdade()}</p>
+                                      <p><img class="seta" src="img/seta.png">Peso: ${usuario.peso}</p>
+                                      <p><img class="seta" src="img/seta.png">Status: ${usuario.getStatusPeso()}</p>
+                                      <p><img class="seta" src="img/seta.png">Altura: ${usuario.altura}</p>
+                                      <p><img class="seta" src="img/seta.png">IMC: ${usuario.getFormattedImc()}</p>
+                                      <p><img class="seta" src="img/seta.png">Condição física: ${usuario.nome}</p>
+                                 </div>
+                                
+                                 <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados1">
+                                 <h3><img src="img/sugestao.png" width="22px" height="20px">Ideal / Atividades</h3>
+                                      <p><img class="seta" src="img/seta.png">IMC Ideal: </p>
+                                      <p><img class="seta" src="img/seta.png">Peso Ideal: ${usuario.nome}</p>
+                                      <p><img class="seta" src="img/seta.png">Peso Mínimo: ${usuario.getPesoMinimo()}</p>
+                                      <p><img class="seta" src="img/seta.png">Peso Máximo: ${usuario.getPesoMaximo()}</p>
+                                      <p><img class="seta" src="img/seta.png">Kcal ideais /dia: ${usuario.getCaloriasDia()}</p>
+                                      <p><b>Atividades Propostas</b></p>
+                                </div>
+                               
+                                <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados2">
+                                 <h3><img src="img/indicacao.png" width="22px" height="20px">Indicações Six Fit</h3>
+                                      <p><img class="seta" src="img/seta.png">UFU - Educação Fisica</p>
+                                      <p style="font-size: 12px; margin-top: -7px; margin-left: 6px;">Pilates (bola e solo)</p>
+                                      <p style="font-size: 12px; margin-top: -7px; margin-left: 6px;">Musculação</p>
+                                      <p style="font-size: 12px; margin-top: -7px; margin-left: 6px;">Natação</p>
+                                     
+                                      <p><img class="seta" src="img/seta.png">Parque do Sabiá</p>
+                                      <p style="font-size: 12px; margin-top: -7px; margin-left: 6px;">Atletismo</p>
+                                      <p style="font-size: 12px; margin-top: -7px; margin-left: 6px;">Basquete</p>
+                                      <p style="font-size: 12px; margin-top: -7px; margin-left: 6px;">Futebol</p>
+                                       <p style="font-size: 12px; margin-top: -7px; margin-left: 6px;">Rugby</p>
+                                     
+                                      <p><img class="seta" src="img/seta.png">Zumba na Praça</p>
+                                      <p style="font-size: 12px; margin-top: -7px; margin-left: 6px;">Praça Vasco Gifone - Bairro Saraiva</p>
+                                       
+                                      <p><img class="seta" src="img/seta.png">Futel</p>
+                                      <p style="font-size: 12px; margin-top: -7px; margin-left: 6px;">Informações: (34) 3235-6289</p>
+                                </div>
+                           </div>
                     </div>
               </div>      
 			<%@include  file="footer.html" %>

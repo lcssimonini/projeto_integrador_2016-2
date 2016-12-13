@@ -8,9 +8,9 @@ public abstract class SQLConstants {
     
 	public static final String SQL_FIND_ALL = "SELECT * FROM usuarios ORDER BY nome";
     
-	public static final String SQL_INSERT = "INSERT INTO usuarios (nome, email, genero, nascimento, peso, altura, senha) VALUES (?,?,?,?,?,?,?)";
+	public static final String SQL_INSERT = "INSERT INTO usuarios (nome, email, genero, nascimento, peso, altura, senha,status_fumante,status_atividade,atividade,doenca) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
     
-	public static final String SQL_UPDATE = "UPDATE usuarios SET ${update_clause} WHERE id = ?";
+	public static final String SQL_UPDATE = "UPDATE usuarios SET nome=?,email=?,genero=?,nascimento=?,peso=?,altura=?,senha=?,status_fumante=?,status_aividade=?,atividade=?,doenca=? WHERE id = ?";
     
 	public static final String SQL_DELETE = "DELETE FROM usuarios WHERE id = ?";
     
