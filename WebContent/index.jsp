@@ -8,23 +8,32 @@
                 <div class="col-dm-1 col-dg-2 col-deg-2 esconde"></div>                
                 <div class="col-dp-12 col-dm-10 col-dg-8 col-deg-8">
                         <div class="header">
-                                <div class="logo"><img src="img/logo.png" alt="Logo" Title="SixFit - PÃ¡gina Inicial"></div>
-                                <ul class="topnav" id="myTopnav">
-                                   
-                                    <span><li><a class="active" href="#home">Menu</a></li></span>
-                                    <li><a href="#home" click="scroll('home')" >Home</a></li>
-                                    <li><a href="#news" click="scroll('news')">O Que Fazemos</a></li>
-                                    <li><a href="#about" click="scroll('about')">Quem Somos</a></li>
-                                    <li><a href="#contact" click="scroll('contact')">Contato</a></li>
-                                    <li><button id="myBtn" class="botaologin">LOGIN</button></li>
+									<div class="logo">
+                                		<a href="/sixfit/"> 
+                                			<img src="img/logo.png" alt="Logo" Title="SixFit - Página Inicial">
+                                		</a>
+                                	</div>
+                                <ul class="topnav" id="myTopnav">                                   
+                                    <span><li><a class="active" href="#home" >Menu</a></li></span>
+                                    <li><a class="home" href="javascript:;" >Home</a></li>
+                                    <li><a class="news" href="javascript:;" >O Que Fazemos</a></li>
+                                    <li><a class="about" href="javascript:;" >Quem Somos</a></li>
+                                    <li><a class="contact" href="javascript:;" >Contato</a></li>
+                                    <li id="login"><button id="myBtn" class="botaologin">LOGIN</button></li>
+									<li id="logout">
+										<a href="logout">
+											<button id="logout" class="botaologin">LOGOUT</button><a>
+										</a>
+									</li>
+                                    <li><span id="emailUsuario"></span></li>
                                 </ul>
-                                <span style="cursor:pointer" onclick="openNav()"><img src="img/menu.png" alt="Logo" Title="SixFit - PÃ¡gina Inicial"></span>
+                                <span style="cursor:pointer" onclick="openNav()"><img src="img/menu.png" alt="Logo" Title="SixFit - Página Inicial"></span>
                                 <div id="mySidenav" class="sidenav">
 								  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-								  <a href="#">Home</a>
-								  <a href="#">O Que Fazemos</a>
-								  <a href="#">Quem Somos</a>
-								  <a href="#">Contato</a>
+                                    <li><a href="javascript:;" click="scroll('home')" >Home</a></li>
+                                    <li><a href="javascript:;" click="scroll('news')">O Que Fazemos</a></li>
+                                    <li><a href="javascript:;" click="scroll('about')">Quem Somos</a></li>
+                                    <li><a href="javascript:;" click="scroll('contact')">Contato</a></li>
 								  <button id="myBtn" class="botaologin">LOGIN</button></li>
 								</div>
                         </div>
@@ -57,8 +66,8 @@
 							</div>
 						</div>
 							
-						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						<a class="prev" >&#10094;</a>
+  						<a class="next" >&#10095;</a>
 						
 						</div>
 						<br>

@@ -10,12 +10,21 @@
                 <div class="col-dm-1 col-dg-2 col-deg-2 esconde"></div>
                 <div class="col-dp-12 col-dm-10 col-dg-8 col-deg-8">
                         <div class="header">
-                                <div class="logo"><img src="img/logo.png" alt="Logo" Title="SixFit - Página Inicial"></div>
+                                <div class="logo">
+                                	<a href="/sixfit/"> 
+                                		<img src="img/logo.png" alt="Logo" Title="SixFit - Página Inicial">
+                                	</a>
+                                </div>
                                 <ul class="topnav" id="myTopnav">
                                     <span><li><a class="active" href="#home">Menu</a></li></span>
-                                    <li><a href="#home">Home</a></li>
-                                    <li><a href="#contact" click="scroll('contact')" >Contato</a></li>
-                                    <li><button id="myBtn" class="botaologin">LOGIN</button></li>
+                                    <li><a href="/sixfit/">Home</a></li>
+                                    <li><a class="contact" href="javascript:;" >Contato</a></li>
+                                    <li id="logout">
+										<a href="logout">
+											<button id="logout" class="botaologin">LOGOUT</button><a>
+										</a>
+									</li>
+                                    <li><span id="emailUsuario"></span></li>
                                 </ul>
                                 <span style="cursor:pointer" onclick="openNav()"><img src="img/menu.png" alt="Logo" Title="SixFit - Página Inicial"></span>
                                 <div id="mySidenav" class="sidenav">

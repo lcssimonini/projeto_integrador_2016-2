@@ -24,11 +24,9 @@ public class UsuarioLogadoServlet extends HttpServlet {
 		Usuario usuario = LoginBO.getUsuarioLogado(req);
 		
 		if (usuario != null) {
-			Gson gson = new Gson();
-			
-			resp.getWriter().write("{usuario_logado: "+gson.toJson(usuario)+"}");
+			resp.getWriter().write("{\"usuario_logado\": \""+usuario.getEmail()+"\"}");
 		} else {
-			resp.getWriter().write("{usuario_logado: nenhum}");
+			resp.getWriter().write("{\"usuario_logado\": \"nenhum\"}");
 		}
 	}
 }
