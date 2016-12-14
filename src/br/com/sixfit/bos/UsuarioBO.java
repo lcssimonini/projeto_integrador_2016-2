@@ -47,4 +47,8 @@ public class UsuarioBO {
 		
 		return usuariojdbc.create(usuario);
 	}
+	
+	public static Usuario updateUsuario(Usuario usuario) throws Exception {
+		return usuariojdbc.update(usuario);
+	}
 }

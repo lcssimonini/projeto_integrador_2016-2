@@ -1,5 +1,7 @@
 package br.com.sixfit.bos;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,9 +9,13 @@ import br.com.sixfit.entities.Usuario;
 
 public class FitnessBO {
 	
+	private static final String FEMININO = "1";
 	private static final double PESO_MAXIMO_CONSTANT = 24.99;
 	private static final double PESO_MINIMO_CONSTANT = 18.5;
+	
 	private static Map<String, Integer> caloriasPorAtividade;
+	private static Map<String, String> statusSaude;
+	
 	private static final Double IMC_BAIXO = 18.5;
 	private static final Double IMC_SOBREPESO = 25.0;
 	private static final Double IMC_OBESIDADE_1 = 30.0;
@@ -23,6 +29,11 @@ public class FitnessBO {
 		caloriasPorAtividade.put("NATACAO", 500);
 		caloriasPorAtividade.put("FUTEBOL", 580);
 		caloriasPorAtividade.put("VOLEI", 320);
+		
+		statusSaude = new HashMap<String, String>();
+		statusSaude.put("1", "SEDENTARIO");
+		statusSaude.put("2", "PRATICA ATIVIDADE AS VEZES");
+		statusSaude.put("3", "PRATICA ATIVIDADE SEMPRE");
 	}
 	
 	public static String getStatusPeso(Usuario usuario) {
@@ -45,46 +56,49 @@ public class FitnessBO {
 		return statusPeso;
 	}
 	
-//	66 + (13,7 x Peso) + (5,0 x Altura em cm) – (6,8 x Idade) - Homem
-//	665 + (9,6 x Peso) + (1,8 x Altura em cm) – (4,7 x Idade) - Mulher
-
-	
-	
 	public static String getCaloriasDia(Usuario usuario) {
 		Double caloriasDia;
-		if ("1".equals(usuario.getGenero())) {
+		if (FEMININO.equals(usuario.getGenero())) {
 			caloriasDia = new Double((665 + (9.6 * usuario.getPeso())) + (1.8 * usuario.getAlturaCM()) - (4.7 * usuario.getIdade()));
 		} else {
 			caloriasDia = new Double((66 + (13.7 * usuario.getPeso())) + (5 * usuario.getAlturaCM()) - (6.8 * usuario.getIdade()));
 			
 		}
-		return caloriasDia.toString();
+		return round(caloriasDia, 0).toString();
 	}
 	
 	public static String getPesoIdeal(Usuario usuario) {
 		Double pesoIdeal;
 		
-		if ("1".equals(usuario.getGenero())) {
+		if (FEMININO.equals(usuario.getGenero())) {
 			pesoIdeal = new Double( 21 / (Math.pow(usuario.getAltura(), 2)));
 		} else {
 			pesoIdeal = new Double( 23 / (Math.pow(usuario.getAltura(), 2)));
 		}
 		
-		return pesoIdeal.toString();
+		return round(pesoIdeal, 2).toString();
 	}
 
 	
 	public static String getPesoMinimo(Usuario usuario) {
 	 	double alturaQuadrado = Math.pow(usuario.getAltura(), 2);
 	 	double pesoMinimo = (alturaQuadrado * PESO_MINIMO_CONSTANT);
-	 	return new Double(pesoMinimo).toString();
+	 	return round(new Double(pesoMinimo), 2).toString();
 	 }
 	
 	public static String getPesoMaximo(Usuario usuario) {
 	 	double alturaQuadrado = Math.pow(usuario.getAltura(), 2);
 	 	double pesoMaximo = (alturaQuadrado * PESO_MAXIMO_CONSTANT);
-	 	return new Double(pesoMaximo).toString();
+	 	return round(new Double(pesoMaximo), 2).toString();
 	 }
+	
+	private static Double round(Double value, int places) {
+	    if (places < 0) throw new IllegalArgumentException();
+
+	    BigDecimal bd = new BigDecimal(value);
+	    bd = bd.setScale(places, RoundingMode.HALF_UP);
+	    return bd.doubleValue();
+	}
 }
 
 

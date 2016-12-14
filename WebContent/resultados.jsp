@@ -52,13 +52,13 @@
                                       <p><img class="seta" src="img/seta.png">Status: ${usuario.getStatusPeso()}</p>
                                       <p><img class="seta" src="img/seta.png">Altura: ${usuario.altura}</p>
                                       <p><img class="seta" src="img/seta.png">IMC: ${usuario.getFormattedImc()}</p>
-                                      <p><img class="seta" src="img/seta.png">Condição física: ${usuario.nome}</p>
+                                      <p><img class="seta" src="img/seta.png">Condição física: ${usuario.getCondicao()}</p>
                                  </div>
                                 
                                  <div class="col-dg-4 col-deg-4 col-dm-12 col-dp-12 dadosresultados1">
                                  <h3><img src="img/sugestao.png" width="22px" height="20px">Ideal / Atividades</h3>
                                       <p><img class="seta" src="img/seta.png">IMC Ideal: </p>
-                                      <p><img class="seta" src="img/seta.png">Peso Ideal: ${usuario.nome}</p>
+                                      <p><img class="seta" src="img/seta.png">Peso Ideal: ${usuario.getPesoIdeal()}</p>
                                       <p><img class="seta" src="img/seta.png">Peso Mínimo: ${usuario.getPesoMinimo()}</p>
                                       <p><img class="seta" src="img/seta.png">Peso Máximo: ${usuario.getPesoMaximo()}</p>
                                       <p><img class="seta" src="img/seta.png">Kcal ideais /dia: ${usuario.getCaloriasDia()}</p>

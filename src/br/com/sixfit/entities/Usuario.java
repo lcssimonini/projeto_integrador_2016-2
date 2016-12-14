@@ -49,6 +49,10 @@ public class Usuario {
 		return new Integer(anohj-anoNascimento);
 	}
 	
+	public String getCondicao() {
+		return statusAtividade;
+	}
+	
 	public String getStatusPeso() {
 		return FitnessBO.getStatusPeso(this);
 	}
@@ -166,6 +170,10 @@ public class Usuario {
 
 	public void setStatusFumante(String statusFumante) {
 		this.statusFumante = statusFumante;
+	}
+	
+	public boolean isFumante() {
+		return "SIM".equals(statusFumante);
 	}
 
 	public String getStatusAtividade() {

@@ -1,6 +1,7 @@
 package br.com.sixfit.servlets;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,19 +25,25 @@ public class AtividadesServlet extends HttpServlet {
 		} catch (Exception e) {
 		}
 		
-		System.out.println(usuarioLogado.getEmail());
-		System.out.println(request.getAttribute("radios"));
+		String[] atividadesArray = request.getParameterValues("atividades");
+		String[] doencasArray = request.getParameterValues("doencas");
+		String fumante = request.getParameter("fumante");
+		String statusAtividade = request.getParameter("status_atividade");
+
+		if (usuarioLogado != null) {
+			
+			usuarioLogado.setAtividade(String.join(",", atividadesArray));
+			usuarioLogado.setDoenca(String.join(",", doencasArray));
+			usuarioLogado.setStatusFumante(fumante);
+			usuarioLogado.setStatusAtividade(statusAtividade);
+			
+			try {
+				UsuarioBO.updateUsuario(usuarioLogado);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		
-		Usuario usuario = null;
-		
-		try {
-			usuario = UsuarioBO.createUsuario(request);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		if (usuario != null) {
-			request.setAttribute(LoginBO.USUARIO_LOGADO, usuario);
+			request.setAttribute("usuario", usuarioLogado);
 			request.getRequestDispatcher("resultados.jsp").forward(request, response);
 		} else {
 			response.sendRedirect("index.jsp");
