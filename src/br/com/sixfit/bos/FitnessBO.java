@@ -12,6 +12,8 @@ public class FitnessBO {
 	private static final String FEMININO = "1";
 	private static final double PESO_MAXIMO_CONSTANT = 24.99;
 	private static final double PESO_MINIMO_CONSTANT = 18.5;
+	private static final double CALORIAS_KILO = 7770.0;
+	
 	
 	private static Map<String, Integer> caloriasPorAtividade;
 	private static Map<String, String> statusSaude;
@@ -71,12 +73,20 @@ public class FitnessBO {
 		Double pesoIdeal;
 		
 		if (FEMININO.equals(usuario.getGenero())) {
-			pesoIdeal = new Double( 21 / (Math.pow(usuario.getAltura(), 2)));
+			pesoIdeal = new Double( 21 * (Math.pow(usuario.getAltura(), 2)));
 		} else {
-			pesoIdeal = new Double( 23 / (Math.pow(usuario.getAltura(), 2)));
+			pesoIdeal = new Double( 23 * (Math.pow(usuario.getAltura(), 2)));
 		}
 		
 		return round(pesoIdeal, 2).toString();
+	}
+	
+	public static String getIMCIdeal(Usuario usuario) {
+		if (FEMININO.equals(usuario.getGenero())) {
+			return "21";
+		} else {
+			return "23";
+		}
 	}
 
 	
@@ -98,6 +108,12 @@ public class FitnessBO {
 	    BigDecimal bd = new BigDecimal(value);
 	    bd = bd.setScale(places, RoundingMode.HALF_UP);
 	    return bd.doubleValue();
+	}
+	
+	public static String getHorasAtividade(String atividade, double kilos) {
+		double caloriasHora = caloriasPorAtividade.get(atividade).doubleValue();
+		double kilosHora = (caloriasHora/CALORIAS_KILO);
+		return round(new Double((kilos/kilosHora)), 2).toString();
 	}
 }
 

@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
 			request.getRequestDispatcher("resultados.jsp").forward(request, response);
 		} else {
 			if (LoginBO.login(request)) {
-				System.out.println("login sucesso");
+				System.out.println(LoginBO.getUsuarioLogado(request).getPesoIdeal());
 				
 				request.setAttribute("usuario", LoginBO.getUsuarioLogado(request));
 				request.getRequestDispatcher("resultados.jsp").forward(request, response);

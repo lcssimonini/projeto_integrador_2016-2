@@ -2,8 +2,12 @@ package br.com.sixfit.entities;
 
 import java.sql.Date;
 import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -24,6 +28,8 @@ public class Usuario {
 	private String atividade;
 	private String doenca;
 	
+	private Map<String, String> atividadesHoras = new HashMap<String, String>();
+	
 	private String senha;
 	
 	public Usuario(String nome, String email) {
@@ -34,6 +40,15 @@ public class Usuario {
 	
 	public Usuario() {
 		super();
+	}
+	
+	public List<String> getListaAtividades() {
+		return Arrays.asList(atividade.split(","));
+	}
+	
+	public String getHorasAtividade(String atividade) {
+		double kilosAPerder = this.peso - Float.parseFloat(this.getPesoIdeal());
+		return FitnessBO.getHorasAtividade(atividade, kilosAPerder);
 	}
 	
 	public Integer getIdade() {
@@ -71,6 +86,10 @@ public class Usuario {
 	
 	public String getPesoIdeal() {
 		return FitnessBO.getPesoIdeal(this);
+	}
+	
+	public String getIMCIdeal() {
+		return FitnessBO.getIMCIdeal(this);
 	}
 	
 	public Double getImc() {
@@ -234,5 +253,5 @@ public class Usuario {
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nome=" + nome + ", email=" + email + "]";
-	}	
+	}
 }
