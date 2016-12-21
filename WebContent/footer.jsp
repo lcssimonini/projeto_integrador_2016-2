@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <div id="contact" class="linha rodape"><a name="contato"></a>
 	<div class="linha">
 		<div class="col-dg-1 col-deg-1 esconde escondemeio"></div>	
@@ -20,8 +22,9 @@
 						<label>
 							 <span>Mensagem</span>
 							<textarea class="message" name="feedback" id="feedback" onclick="limpar('feedback')"></textarea><br>
-							<div class="botao1" title="Faça agora o seu Cadastro!" onclick="validar()">Enviar</div>
-						</label>           
+							<div class="botao1" title="Faça agora o seu Cadastro!"
+							onclick="validar()">Enviar</div>
+					</label>           
 					</div>
 				</form>
 		</div>
@@ -58,7 +61,8 @@
 		
 		<div class="col-dp-12 col-dm-8 col-dg-6 col-deg-6">
 			<div class="copyright">
-				<p>Copyright © <a href="#home" title="Sixfit - Página Inicial"><span>SIXFIT</span></a>, Instituto Federal de Educação, Ciência e Tecnologia 2016</p>
+				<p>Copyright © <a href="#home" title="Sixfit - Página Inicial"><span>SIXFIT</span></a>
+				, Instituto Federal de Educação, Ciência e Tecnologia 2016</p>
 			</div>
 		</div>
 		

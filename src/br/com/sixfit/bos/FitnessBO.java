@@ -5,6 +5,8 @@ import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
+
 import br.com.sixfit.entities.Usuario;
 
 public class FitnessBO {
@@ -111,6 +113,9 @@ public class FitnessBO {
 	}
 	
 	public static String getHorasAtividade(String atividade, double kilos) {
+		if (StringUtils.isEmpty(atividade)) {
+			return "Nenhuma atividade cadastrada";
+		}
 		double caloriasHora = caloriasPorAtividade.get(atividade).doubleValue();
 		double kilosHora = (caloriasHora/CALORIAS_KILO);
 		return round(new Double((kilos/kilosHora)), 2).toString();

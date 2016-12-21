@@ -1,8 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 	<html>
-	<%@include  file="head.html" %>
-		<meta http-equiv="Content-Type" content="text/html" ; charset="ISO-8859-1">
+	<%@include  file="head.jsp" %>
 		<body>
 			<div class="container-fluid">
 				<a id="home"></a>
@@ -30,7 +29,7 @@
 								</li>
 								<li><span id="emailUsuario"></span></li>
 							</ul>
-							<span style="cursor:pointer" onclick="openNav()"><img src="img/menu.png" alt="Logo" Title="SixFit - PÃ¡gina Inicial"></span>
+							<span style="cursor:pointer" onclick="openNav()"><img src="img/menu.png" alt="Logo" Title="SixFit - Página Inicial"></span>
 							<div id="mySidenav" class="sidenav">
 								<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 								<li><a href="javascript:;" click="scroll('home')">Home</a></li>
@@ -54,8 +53,11 @@
 								<div class="text">
 									<h1 style="font-size:300%;"><span style="color:#E27D15">MONITORE</span> SEU PROGRESSO
 										<h1>
-											<p>NÃ³s sabemos que cada quilometro importa para vocÃª, por isso entregamos cada detalhe: ritmo, distÃ¢ncia, rota e
-												recordes pessoais com muita precisÃ£o e ainda mais controle sobre os dados que vocÃª deseja ver durante sua corrida.<br></p>
+											<p>
+											
+											Nós sabemos que cada quilometro importa para você, por isso entregamos cada detalhe: 
+											ritmo, distância, rota e recordes pessoais com muita precisão e ainda mais controle sobre
+											 os dados que você deseja ver durante sua corrida.<br></p>
 								</div>
 							</div>
 
@@ -64,8 +66,9 @@
 								<div class="text">
 									<h1 style="font-size:300%;"><span style="color:#E27D15">CORRE</span> JUNTO
 										<h1>
-											<p>Nunca foi tÃ£o fÃ¡cil comparar e competir com seus amigos e corredores do mundo todo. Tudo que vocÃª precisa fazer
-												Ã© colocar as hashtags especÃ­ficas ao compartilhar suas corridas nas redes sociais..<br></p>
+											<p>Nunca foi tão fácil comparar e competir com seus amigos e corredores do mundo todo. 
+											Tudo que você precisa fazer é colocar as hashtags específicas ao compartilhar suas corridas nas 
+											redes sociais..<br></p>
 								</div>
 							</div>
 
@@ -91,15 +94,17 @@
 							<h4>O Que Fazemos</h4>
 							<h1>SIXFIT</h1>
 							<p>
-								Ã amplamente reconhecido que praticar atividades fÃ­sicas e exercÃ­cios fÃ­sicos podem trazer grandes benefÃ­cios aÂ saÃºde. Entretanto,
-								para se tirar o mÃ¡ximo destas prÃ¡ticas Ã©' necessÃ¡rio que seja realizada uma avaliaÃ§Ã£o fÃ­sica prÃ©via, que permitirÃ¡
-								a prescriÃ§Ã£o do exercÃ­cios com maior seguranÃ§a.<br><br> O programa proposto pela Sixfit Ã© uma avaliaÃ§Ã£o
-								fÃ­sica inicial que tem o objetivo de identificar o nÃ­vel de aptidÃ£o fÃ­sica atual do cliente, permitindo que os exercÃÂ­cios
-								possam ser indicados de acordo com suas necessidades e seus objetivos. AtualizaÃ§Ãµes periÃ³dicas permitirÃ£o verificar
-								as possÃ­veis alteraÃ§Ãµes da aptidÃ£o fÃ­sica, decorrentes do programa de exercÃ­cios fÃ­sicos.
+								É amplamente reconhecido que praticar atividades fí­sicas e exercí­cios fí­sicos podem trazer grandes benefí­cios
+								à saúde. Entretanto, para se tirar o máximo destas práticas é necessário que seja realizada uma avaliação física
+								 pŕevia, que permitirá a prescrição do exercí­cios com maior segurança.
+								 <br><br> 
+								 O programa proposto pela Sixfit é uma avaliação física inicial que tem o objetivo de identificar o ní­vel de 
+								 aptidão físiva atual do cliente, permitindo que os exercí­cios possam ser indicados de acordo com suas necessidades
+								  e seus objetivos. Atualizações periódicas permitirão verificar as possí­veis alterações da aptidão fí­sica,
+								   decorrentes do programa de exercí­cios fí­sicos.
 							</p>
 							<br>
-							<div class="botao"><a href="cadastro.html" title="FaÃ§a agora o seu Cadastro!">CADASTRE-SE</a></div>
+							<div class="botao"><a href="cadastro.jsp" title="FaÃ§a agora o seu Cadastro!">CADASTRE-SE</a></div>
 							<br>
 							<img align="center" src="img/quemsomos.jpg" alt="Logo" Title="SixFit - PÃ¡gina Inicial">
 						</div>
@@ -114,16 +119,16 @@
 									<div class="numero">01</div>
 								</div>
 								<div class="col-dp-10 col-dm-8 col-dg-7 col-deg-7">
-									<h1>PRÃTICA DE ESPORTES / 30 MINUTOS</h1>
+									<h1>PRÁTICA DE ESPORTES / 30 MINUTOS</h1>
 									<p>
-										Praticar alguma atividade fÃ­sica pelo menos trÃªs vezes por semana, em seu tempo livre, com duraÃ§Ã£o mÃ­nima de 30 minutos Ã©
-										indicado por profissionais de saÃºde para pessoas de todas idades.
+										Praticar alguma atividade física pelo menos três vezes por semana, em seu tempo livre, com duração mínima
+										 de 30 minutos é indicado por profissionais de saúde para pessoas de todas idades.
 									</P>
-									<h2 class="escondemeio"><a href="#" title="FaÃ§a o Login">Veja os mais indicados para vocÃª.</a></h2>
+									<h2 class="escondemeio"><a href="#" title="Faça o Login">Veja os mais indicados para vocÊ.</a></h2>
 								</div>
 
 								<div class="col-dg-3 col-dm-3 col-deg-3 esconde">
-									<img src="img/1.png" alt="Logo" Title="SixFit - PÃ¡gina Inicial">
+									<img src="img/1.png" alt="Logo" Title="SixFit - Página Inicial">
 								</div>
 							</div>
 							<div class="quadro">
@@ -131,16 +136,16 @@
 									<div class="numero">02</div>
 								</div>
 								<div class="col-dp-10 col-dm-8 col-dg-7 col-deg-7">
-									<h1>ATIVIDADES FÃSICAS</h1>
+									<h1>ATIVIDADES FÍSICAS</h1>
 									<p>
-										Os benefÃ­cios da prÃ¡tica de esportes para sua saÃºde e bem-estar sÃ£o vÃ¡rios. Entre as mais conhecidas e esperadas sÃ£o o controle
-										e diminuiÃ§Ã£o do peso.
+										Os benefícios da prática de esportes para sua saúde e bem-estar são vários. 
+										Entre as mais conhecidas e esperadas são o controle e diminuição do peso.
 									</P>
-									<h2 class="escondemeio"><a href="#" title="FaÃÂ§a o Login">Veja os mais indicados para vocÃª.</a></h2>
+									<h2 class="escondemeio"><a href="#" title="Faça o Login">Veja os mais indicados para você.</a></h2>
 								</div>
 
 								<div class="col-dg-3 col-dm-3 col-deg-3 esconde">
-									<img src="img/2.png" alt="Logo" Title="SixFit - PÃ¡gina Inicial">
+									<img src="img/2.png" alt="Logo" Title="SixFit - Página Inicial">
 								</div>
 							</div>
 							<div class="quadro">
@@ -148,16 +153,17 @@
 									<div class="numero">03</div>
 								</div>
 								<div class="col-dp-10 col-dm-8 col-dg-7 col-deg-7">
-									<h1>EXERCÃCIOS AERÃBICOS</h1>
+									<h1>EXERCíCIOS AERÓBICOS</h1>
 									<p>
-										Indicamos as modalidades Caminhada, NataÃ§Ã£o, Ciclismo, PatinaÃ§Ã£o, DanÃ§a, Corrida e outros exercÃ­cios realizados em intensidade
-										moderada, porÃ©m com a frequÃªncia cardÃ­aca acima do nÃ­vel minimo, que seja de acordo com a capacidade de cada pessoa.
+										Indicamos as modalidades Caminhada, Natação, Ciclismo, Patinação, Dança, Corrida e outros exercí­cios
+										 realizados em intensidade moderada, porém com a frequência cardíaca acima do ní­vel minimo, 
+										 que seja de acordo com a capacidade de cada pessoa.
 									</P>
-									<h2 class="escondemeio"><a href="#" title="FaÃ§a o Login">Veja os mais indicados para vocÃª.</a></h2>
+									<h2 class="escondemeio"><a href="#" title="Faça o Login">Veja os mais indicados para você.</a></h2>
 								</div>
 
 								<div class="col-dg-3 col-dm-3 col-deg-3 esconde">
-									<img src="img/3.png" alt="Logo" Title="SixFit - PÃ¡gina Inicial">
+									<img src="img/3.png" alt="Logo" Title="SixFit - Página Inicial">
 								</div>
 							</div>
 
@@ -193,8 +199,8 @@
 						<h4 class="mostrarpequeno">Quem Somos</h4>
 						<p>
 							Somos um grupo de alunos do curso de sistemas do instituto federal do triangulo mineiro que se reuniu para apresentar uma
-							proposta de projeto de aplicaÃ§Ã£o que realmente ajudasse as pessoas de alguma forma e contribuisse de maneira positiva
-							no dia a dia delas e que trouxesse informaÃ§Ãµes relevantes da sua saÃºde e desse aconselhamentos sobre como alterar
+							proposta de projeto de aplicação que realmente ajudasse as pessoas de alguma forma e contribuisse de maneira positiva
+							no dia a dia delas e que trouxesse informações relevantes da sua saúde e desse aconselhamentos sobre como alterar
 							sua rotina contribuindo com o alcance dos seus objetivos e bem estar.
 						</p>
 					</div>
@@ -202,9 +208,9 @@
 					<div class="col-dg-1 col-deg-1 esconde escondemeio"></div>
 
 				</div>
-				<%@include  file="footer.html" %>
+				<%@include  file="footer.jsp" %>
 			</div>
-			<%@include  file="login.html" %>
+			<%@include  file="login.jsp" %>
 		</body>
-		<%@include  file="scripts.html" %>
+		<%@include  file="scripts.jsp" %>
 	</html>

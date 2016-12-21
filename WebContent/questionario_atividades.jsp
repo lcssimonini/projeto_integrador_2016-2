@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <html>
-<%@include  file="head.html" %>
+<%@include  file="head.jsp" %>
 <body>
 	<div class="container-fluid">
 		<a id="home"></a>
@@ -90,7 +90,7 @@
 							<div class="radio">
 								<label for="-1">
 														  <input name="fumante" id="fumante-1" value="NAO" type="radio">
-														  NÃ£o
+														  Não
 														</label>
 							</div>
 						</div>
@@ -114,7 +114,7 @@
 							<div class="checkbox">
 								<label for="esportescoletivos-2">
 														  <input name="atividades" id="esportescoletivos-2" value="NATACAO" type="checkbox">
-														  NataÃ§Ã£o
+														  Natação
 														</label>
 							</div>
 							
@@ -134,7 +134,7 @@
 					</div>
 					<!-- doenÃ§as -->
 					<div class="form-group">
-						<label class="col-md-4 control-label" for="doencas">Alguma doenÃ§a relevante:</label>
+						<label class="col-md-4 control-label" for="doencas">Alguma doençaa relevante:</label>
 						<div class="col-md-4">
 							<div class="checkbox">
 								<label for="doencas-0">
@@ -161,7 +161,7 @@
 					<div class="form-group">
 						<label class="col-md-4 control-label" for="botaoatividades"></label>
 						<div class="col-md-4">
-							<button onclick="enviarInformacoes()" id="botaoatividades" name="botaoatividades" class="btn btn-primary">Submeter questionÃ¡rio</button>
+							<button onclick="enviarInformacoes()" id="botaoatividades" name="botaoatividades" class="btn btn-primary">Submeter questionário</button>
 						</div>
 					</div>
 				</form>
@@ -174,18 +174,15 @@
 					<div class="imgAtiv2"></div>
 				</div>
 				<div class="rodapeAtv">
-					<p>Com acompanhamento personalizado e adaptÃ¡vel para te ajudar a praticar exercicios da melhor maneira, permitindo comparar
-						e competir com seus amigos em varios esportes, a SIXFIT levarÃ¡ seus exercicios a outro nÃ­vel.</p>
+					<p>Com acompanhamento personalizado e adaptável para te ajudar a praticar exercicios da melhor maneira, permitindo comparar
+						e competir com seus amigos em varios esportes, a SIXFIT levará seus exercicios a outro nível.</p>
 				</div>
 			</div>
 			<div class="col-dg-2 col-deg-2 esconde escondemeio"></div>
 		</div>
 
-
-
-		<!-- RdapÃ© -->
-		<%@include  file="footer.html" %>
+		<%@include  file="footer.jsp" %>
 	</div>
 </body>
-<%@include  file="scripts.html" %>
+<%@include  file="scripts.jsp" %>
 </html>

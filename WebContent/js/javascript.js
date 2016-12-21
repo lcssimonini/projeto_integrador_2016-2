@@ -34,7 +34,8 @@ function showSlides() {
 
 
 function validar() {
-     campos=document.getElementsByTagName("input").length;
+     
+	campos=document.getElementsByTagName("input").length;
      for(i=0;i<campos;i++){
         if(document.getElementsByTagName("input")[i].type=="text"){
           value = document.getElementsByTagName("input")[i].value;

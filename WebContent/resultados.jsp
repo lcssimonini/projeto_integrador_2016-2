@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <html>
-<%@include  file="head.html" %>
+<%@include  file="head.jsp" %>
 <body>
 	<div class="container-fluid">
 		<a id="home"></a>
@@ -66,7 +66,7 @@
                                       <p><b>Atividades Propostas</b></p>
                                       	<ul>
                                       		<c:forEach var="atividade" items ="${usuario.getListaAtividades()}">
-  												<li> <c:out value="${atividade}"/> <c:out value="${usuario.getHorasAtividade(atividade)}"/> horas;</li>
+  												<li> <c:out value="${atividade}"/> <c:out value="${usuario.getHorasAtividade(atividade)}"/>;</li>
 											</c:forEach>
 										</ul>
                                 </div>
@@ -93,8 +93,8 @@
                            </div>
                     </div>
               </div>      
-			<%@include  file="footer.html" %>
+			<%@include  file="footer.jsp" %>
 	</div>	
 </body>
-<%@include  file="scripts.html" %>
+<%@include  file="scripts.jsp" %>
 </html>

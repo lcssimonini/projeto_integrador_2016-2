@@ -1,3 +1,10 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
+<script src="js/javascript.js" type="text/javascript"></script>
+<script src="js/jquery-3.1.1.js" type="text/javascript"></script>
+<script src="js/jquery-ui.js" type="text/javascript"></script>
+<script src="js/jquery.mask.js" type="text/javascript"></script>
 <script>
 		// Get the modal
 		var modal = document.getElementById('myModal');
@@ -28,16 +35,15 @@
 		        modal.style.display = "none";
 		    }
 		}
-	</script>
-	<script src="js/javascript.js" type="text/javascript"></script>
-	<script src="js/jquery-3.1.1.js" type="text/javascript"></script>
-	<script src="js/jquery-ui.js" type="text/javascript"></script>
-	<script>
-			
+
 		var usuario;
 		$(document).ready(function() {
 			$("#logout").hide();
 			getUsuarioLogado();
+			
+			$('#nascimento').mask('00/00/0000');
+			$('#peso').mask('000.00');
+			$('#altura').mask('00.00');
 		});
 	
 		function getUsuarioLogado() {
@@ -72,8 +78,7 @@
 		
 		$( ".contact" ).click(function() {
 			scroll("contact");
-		});	
-		
-	</script>
+		});
+</script>
 	
 	

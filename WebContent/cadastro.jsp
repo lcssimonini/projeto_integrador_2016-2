@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <html>
-<%@include  file="head.html" %>
+<%@include  file="head.jsp" %>
 <body>
 	<div class="container-fluid">
 		<a id="home"></a>
@@ -46,20 +46,19 @@
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="Nome Completo">Nome Completo:</label>
                                                          <div class="col-md-5">
-                                                                 <input id="NomeCompleto" name="nome" placeholder=" Digite aqui o nome completo" class="inputg" required=""
-                                                                         type="text">
+                                                         	<input id="NomeCompleto" name="nome" placeholder=" Digite aqui o nome completo" class="inputg" type="text" required>
                                                          </div>
                                                  </div>
                                                  <!-- email-->
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="email">Email:</label>
                                                          <div class="col-md-5">
-                                                                 <input id="email1" name="email" placeholder=" Digite aqui seu email" class="inputg" required="" type="text">
+                                                                 <input id="email1" name="email" placeholder=" Digite aqui seu email" class="inputg" type="email" required>
                                                          </div>
                                                  </div>
                                                  <!-- genero -->
                                                  <div class="form-group">
-                                                         <label class="col-md-4 control-label" for="genero">GÃªnero</label>
+                                                         <label class="col-md-4 control-label" for="genero">Gênero</label>
                                                          <div class="col-md-4">
                                                                  <label class="radio-inline" for="genero-0">
                                                                    <input name="genero" id="genero-0" value="1" type="radio">
@@ -75,14 +74,14 @@
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="nascimento">Data de nascimento:</label>
                                                          <div class="col-md-4">
-                                                                 <input id="nascimento" name="nascimento" placeholder=" DD/MM/AA" class="inputm" required="" type="text">
+                                                                 <input id="nascimento" name="nascimento" placeholder=" DD/MM/AA" class="inputm" type="text" required>
                                                          </div>
                                                  </div>
                                                  <!-- peso-->
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="peso">Peso:</label>
                                                          <div class="col-md-2">
-                                                                 <input id="peso" name="peso" placeholder=" 000" class="inputp" required="" type="text">
+                                                                 <input id="peso" name="peso" placeholder=" 000" class="inputp" type="text" required>
                                                                  <span>kg </span>
                                                          </div>
                                                  </div>
@@ -90,7 +89,7 @@
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="altura">Altura</label>
                                                          <div class="col-md-2">
-                                                                 <input id="altura" name="altura" placeholder=" 0,00" class="inputp" required="" type="text">
+                                                                 <input id="altura" name="altura" placeholder=" 0,00" class="inputp" type="text" required>
                                                                  <span>m (em metros)</span>
                                                          </div>
                                                  </div>
@@ -98,23 +97,21 @@
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="senhacadastrada">Senha:</label>
                                                          <div class="col-md-4">
-                                                                 <input id="senhacadastrada" name="senha" placeholder=" Digite uma senha" class="inputg" required=""
-                                                                         type="password">
+                                                                 <input id="senhacadastrada" name="senha" placeholder=" Digite uma senha" class="inputg" type="password" required>
                                                          </div>
                                                  </div>
                                                  <!-- confirmar senha-->
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="confirmarsenha">Confirme a senha:</label>
                                                          <div class="col-md-4">
-                                                                 <input id="confirmarsenha" name="confirmarsenha" placeholder=" Digite sua senha novamente" class="inputg" required=""
-                                                                         type="password">
+                                                                 <input id="confirmarsenha" name="confirmarsenha" placeholder=" Digite sua senha novamente" class="inputg" required type="password">
                                                          </div>
                                                  </div>
                                                  <!-- botao -->
                                                  <div class="form-group">
                                                          <label class="col-md-4 control-label" for="confirmacadastro"></label>
                                                          <div class="col-md-4">
-                                                                 <button type="submit" id="confirmacadastro" name="confirmacadastro" class="btn" onclick="valida()">Finalizar Cadastro</button>
+                                                                 <button type="submit" id="confirmacadastro" name="confirmacadastro" class="btn">Finalizar Cadastro</button>
                                                          </div>
                                                  </div>
                                  </form>
@@ -122,11 +119,15 @@
                             <div class="col-dg-4 col-deg-4 col-dm-6 col-dp-12">
                                     <div class="imgCadastro">
                                         <img align="center" src="img/7.png" alt="Logo" Title="SixFit - Experimente uma sabor novo de viver">
-                                        <p style="font-size: 17px; color:white; font-weight: bold;">O programa proposto pela <a href="index.html" title="Sixfit para vocÃª!">SIXFIT</a> Ã© uma avaliaÃ§Ã£o fÃ­sica inicial que tem o objetivo de identificar o nÃ­vel de aptidÃ£o fÃ­sica atual do cliente, permitindo que os exercÃ­cios possam ser indicados de acordo com suas necessidades e seus objetivos.<br><br></p>
+                                        <p style="font-size: 17px; color:white; font-weight: bold;">O programa proposto pela 
+                                        <a href="index.html" title="Sixfit para vocÃª!">SIXFIT</a>
+                                         É uma avaliação fí­sica inicial que tem o objetivo de identificar o ní­vel de aptidão fí­sica atual
+                                          do cliente, permitindo que os exercí­cios possam ser indicados de acordo com suas necessidades e
+                                           seus objetivos.<br><br></p>
                                         
                                     </div>
                                     <div class="rodapeMsg">
-                                        <p>ConheÃ§a nossas redes sociais.</p>
+                                        <p>Conheça nossas redes sociais.</p>
                                         <div class="redesSociais">
                                             <img src="img/facebook.png" alt="Facebook" Title="SixFit - Facebook">    
                                             <img src="img/instagram.png" alt="Instagram" Title="SixFit - Instagram">  
@@ -137,12 +138,12 @@
                             </div>
                             <div class="col-dg-2 col-deg-2 esconde escondemeio"></div>
                     </div>
-			<%@include  file="footer.html" %> 
+			<%@include  file="footer.jsp" %> 
         </div> 
 </body>
-<%@include  file="login.html" %>
+<%@include  file="login.jsp" %>
 </body>
-<%@include  file="scripts.html" %>
+<%@include  file="scripts.jsp" %>
 <script>
 	$( document ).ready(function() {
 		$("#nascimento").datepicker({
@@ -150,9 +151,9 @@
 		    dayNames: ['Domingo','Segunda','TerÃ§a','Quarta','Quinta','Sexta','SÃ¡bado'],
 		    dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
 		    dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','SÃ¡b','Dom'],
-		    monthNames: ['Janeiro','Fevereiro','MarÃ§o','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+		    monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
 		    monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],
-		    nextText: 'PrÃ³ximo',
+		    nextText: 'Próximo',
 		    prevText: 'Anterior',
 		    changeYear: true
 		});

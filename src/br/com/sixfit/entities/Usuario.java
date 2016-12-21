@@ -43,12 +43,16 @@ public class Usuario {
 	}
 	
 	public List<String> getListaAtividades() {
+		if (atividade == null) {
+			return Arrays.asList(new String[]{""});
+		}
+		
 		return Arrays.asList(atividade.split(","));
 	}
 	
 	public String getHorasAtividade(String atividade) {
 		double kilosAPerder = this.peso - Float.parseFloat(this.getPesoIdeal());
-		return FitnessBO.getHorasAtividade(atividade, kilosAPerder);
+		return FitnessBO.getHorasAtividade(atividade, kilosAPerder)+" horas";
 	}
 	
 	public Integer getIdade() {
